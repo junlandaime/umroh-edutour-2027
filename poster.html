@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Poster Promosi - Umrah Edutour 2027</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-900 via-indigo-900 to-teal-900 text-white shadow-lg sticky top-0 z-30">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="p-2 bg-white/10 hover:bg-white/20 rounded-xl transition flex items-center gap-1.5 text-xs font-semibold">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Kembali ke Rundown</span>
+                </a>
+                <div>
+                    <h1 class="text-base md:text-lg font-bold tracking-tight">Galeri Poster Publikasi & Promosi</h1>
+                    <p class="text-[11px] text-blue-200">Koleksi Desain Resmi untuk Khalayak Umum, Mahasiswa ITB & Orang Tua</p>
+                </div>
+            </div>
+            <div class="text-[11px] text-gray-300">
+                Penyelenggara: <strong class="text-white">Masjid Salman ITB</strong> & <strong class="text-amber-300">Khalifah Tour</strong>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
+        <!-- Filter & Control Bar -->
+        <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <h2 class="text-base font-bold text-gray-900 flex items-center gap-2">
+                    <span>🎨</span> 9 Poster Utama (3 Pilihan per Target Audiens)
+                </h2>
+                <p class="text-xs text-gray-500 mt-0.5">Tersedia masing-masing 3 opsi visual untuk Mahasiswa, Orang Tua, dan Khalayak Umum.</p>
+            </div>
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap items-center gap-2">
+                <button onclick="filterCategory('embedded')" id="btn-embedded" class="filter-btn px-3.5 py-1.5 bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-300 text-gray-950 text-xs font-black rounded-xl transition shadow-md ring-2 ring-amber-400">
+                    ✨ Tokoh Nyata Embedded (7 Pilihan Berbeda)
+                </button>
+                <button onclick="filterCategory('mahasiswa')" id="btn-mahasiswa" class="filter-btn px-3.5 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold rounded-xl transition">
+                    🎓 Mahasiswa
+                </button>
+                <button onclick="filterCategory('orangtua')" id="btn-orangtua" class="filter-btn px-3.5 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold rounded-xl transition">
+                    👨‍👩‍👦 Orang Tua
+                </button>
+                <button onclick="filterCategory('umum')" id="btn-umum" class="filter-btn px-3.5 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold rounded-xl transition">
+                    🌍 Umum
+                </button>
+                <button onclick="filterCategory('all')" id="btn-all" class="filter-btn px-3.5 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold rounded-xl transition">
+                    🌟 Semua Poster Asli
+                </button>
+                <button onclick="filterCategory('all')" id="btn-all" class="filter-btn px-3.5 py-1.5 bg-blue-600 text-white text-xs font-bold rounded-xl transition shadow-sm">
+                    🌟 Semua Poster
+                </button>
+                <button onclick="filterCategory('speaker')" id="btn-speaker" class="filter-btn px-3.5 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold rounded-xl transition">
+                    🎤 Slot Avatar (6)
+                </button>
+                <button onclick="filterCategory('mahasiswa')" id="btn-mahasiswa" class="filter-btn px-3.5 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold rounded-xl transition">
+                    🎓 Mahasiswa (5)
+                </button>
+                <button onclick="filterCategory('orangtua')" id="btn-orangtua" class="filter-btn px-3.5 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold rounded-xl transition">
+                    👨‍👩‍👦 Orang Tua (5)
+                </button>
+                <button onclick="filterCategory('umum')" id="btn-umum" class="filter-btn px-3.5 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold rounded-xl transition">
+                    🌍 Umum (5)
+                </button>
+                <button onclick="filterCategory('tambahan')" id="btn-tambahan" class="filter-btn px-3.5 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold rounded-xl transition">
+                    📁 Arsip (5)
+                </button>
+            </div>
+        </div>
+
+        <!-- Poster Grid -->
+        <div id="posterGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="mahasiswa orangtua umum embedded speaker">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_UMROH_EDUTOUR_2027_5TOKOH.jpg', '✨ Edisi Terbaru: UMROH EDUTOUR 2027 (5 Tokoh Staggered)')">
+                <img src="download/POSTER_UMROH_EDUTOUR_2027_5TOKOH.jpg" alt="✨ Edisi Terbaru: UMROH EDUTOUR 2027 (5 Tokoh Staggered)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-gradient-to-r from-emerald-500 via-teal-400 to-amber-300 text-gray-950 font-black border-amber-400 shadow-lg">
+                        🌟 Edisi Resmi Umroh Edutour 2027
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">✨ Edisi Terbaru: UMROH EDUTOUR 2027 (5 Tokoh Staggered)</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Desain dinamis setengah badan: Cendikia Muslimah di tengah, Guru Besar ITB (batik & jas), Ulama Senior (peci putih), Diaspora Qatar, & Peneliti KAUST (tablet) berlatar Ka'bah senja emas & KAUST.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_UMROH_EDUTOUR_2027_5TOKOH.jpg', '✨ Edisi Terbaru: UMROH EDUTOUR 2027 (5 Tokoh Staggered)')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_UMROH_EDUTOUR_2027_5TOKOH.jpg" download="POSTER_UMROH_EDUTOUR_2027_5TOKOH.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="mahasiswa orangtua umum embedded speaker">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_5_TOKOH_SETENGAH_BADAN_EMBEDDED.jpg', '👑 Masterpiece: 5 Tokoh Setengah Badan (Embedded)')">
+                <img src="download/POSTER_5_TOKOH_SETENGAH_BADAN_EMBEDDED.jpg" alt="👑 Masterpiece: 5 Tokoh Setengah Badan (Embedded)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-200 text-gray-950 font-black border-amber-400 shadow-md">
+                        🌟 Edisi Utama (5 Tokoh Setengah Badan)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">👑 Masterpiece: 5 Tokoh Setengah Badan (Embedded)</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Potret setengah badan (waist-up) 5 figur kunci embedded fotorealistik: Ulama Senior Salman, Guru Besar ITB, Peneliti KAUST, Cendikia Muslimah, & Diaspora Qatar berlatar Ka'bah, KAUST & Kereta Cepat.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_5_TOKOH_SETENGAH_BADAN_EMBEDDED.jpg', '👑 Masterpiece: 5 Tokoh Setengah Badan (Embedded)')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_5_TOKOH_SETENGAH_BADAN_EMBEDDED.jpg" download="POSTER_5_TOKOH_SETENGAH_BADAN_EMBEDDED.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="mahasiswa orangtua umum embedded speaker">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_5_PEMATERI_DEWAN_PAKAR_DAN_DIASPORA.jpg', '👑 Edisi Spesial: 5 Tokoh & Dewan Pakar Terpercaya (Lengkap)')">
+                <img src="download/POSTER_5_PEMATERI_DEWAN_PAKAR_DAN_DIASPORA.jpg" alt="👑 Edisi Spesial: 5 Tokoh & Dewan Pakar Terpercaya (Lengkap)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-gradient-to-r from-amber-500 to-amber-300 text-gray-950 font-black border-amber-400 shadow">
+                        🌟 Edisi Utama (5 Tokoh Embedded)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">👑 Edisi Spesial: 5 Tokoh & Dewan Pakar Terpercaya (Lengkap)</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Formasi lengkap 5 narasumber embedded: Ulama Senior Salman, Guru Besar ITB, Peneliti Diaspora KAUST, Diaspora Alumni Qatar, & Cendikia Muslimah berlatar Ka'bah, KAUST & QNL.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_5_PEMATERI_DEWAN_PAKAR_DAN_DIASPORA.jpg', '👑 Edisi Spesial: 5 Tokoh & Dewan Pakar Terpercaya (Lengkap)')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_5_PEMATERI_DEWAN_PAKAR_DAN_DIASPORA.jpg" download="POSTER_5_PEMATERI_DEWAN_PAKAR_DAN_DIASPORA.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="mahasiswa embedded">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_EMBEDDED_MHS_1_SAINS_DAN_USTADZ.jpg', 'Mhs Embedded 1: Peneliti KAUST & Ustadz Salman')">
+                <img src="download/POSTER_EMBEDDED_MHS_1_SAINS_DAN_USTADZ.jpg" alt="Mhs Embedded 1: Peneliti KAUST & Ustadz Salman" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-blue-600 text-white font-bold">
+                        🎓 Mahasiswa (Tokoh Embedded)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Mhs Embedded 1: Peneliti KAUST & Ustadz Salman</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Peneliti muda diaspora KAUST (jas biru & kacamata) bersama Ustadz muda karismatik Salman ITB (peci & jas) berdiri alami di depan Ka'bah & kampus KAUST.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_EMBEDDED_MHS_1_SAINS_DAN_USTADZ.jpg', 'Mhs Embedded 1: Peneliti KAUST & Ustadz Salman')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_EMBEDDED_MHS_1_SAINS_DAN_USTADZ.jpg" download="POSTER_EMBEDDED_MHS_1_SAINS_DAN_USTADZ.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="mahasiswa embedded">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_EMBEDDED_MHS_2_CENDIKIA_DAN_ENGINEER.jpg', 'Mhs Embedded 2: Cendikia Muslimah & Engineer Qatar')">
+                <img src="download/POSTER_EMBEDDED_MHS_2_CENDIKIA_DAN_ENGINEER.jpg" alt="Mhs Embedded 2: Cendikia Muslimah & Engineer Qatar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-indigo-600 text-white font-bold">
+                        🎓 Mahasiswa (Tokoh Embedded)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Mhs Embedded 2: Cendikia Muslimah & Engineer Qatar</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Muslimah intelektual berhijab elegan memegang buku riset bersama diaspora engineer ITB Qatar di balkon megah Qatar National Library & Ka'bah.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_EMBEDDED_MHS_2_CENDIKIA_DAN_ENGINEER.jpg', 'Mhs Embedded 2: Cendikia Muslimah & Engineer Qatar')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_EMBEDDED_MHS_2_CENDIKIA_DAN_ENGINEER.jpg" download="POSTER_EMBEDDED_MHS_2_CENDIKIA_DAN_ENGINEER.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="orangtua embedded">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_EMBEDDED_ORTU_1_ULAMA_DAN_GURU_BESAR.jpg', 'Ortu Embedded 1: Ulama Karismatik & Guru Besar ITB')">
+                <img src="download/POSTER_EMBEDDED_ORTU_1_ULAMA_DAN_GURU_BESAR.jpg" alt="Ortu Embedded 1: Ulama Karismatik & Guru Besar ITB" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-rose-700 text-white font-bold">
+                        👨‍👩‍👦 Orang Tua (Tokoh Embedded)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Ortu Embedded 1: Ulama Karismatik & Guru Besar ITB</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Ulama sepuh berpeci putih & batik berdampingan dengan Guru Besar ITB berjas resmi di depan Ka'bah senja emas & KAUST. Simbol amanah & wibawa.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_EMBEDDED_ORTU_1_ULAMA_DAN_GURU_BESAR.jpg', 'Ortu Embedded 1: Ulama Karismatik & Guru Besar ITB')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_EMBEDDED_ORTU_1_ULAMA_DAN_GURU_BESAR.jpg" download="POSTER_EMBEDDED_ORTU_1_ULAMA_DAN_GURU_BESAR.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="orangtua embedded">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_EMBEDDED_ORTU_2_PEMBINA_DAN_MAHASISWA.jpg', 'Ortu Embedded 2: Ibu Pembina, Ustadz & Mahasiswa')">
+                <img src="download/POSTER_EMBEDDED_ORTU_2_PEMBINA_DAN_MAHASISWA.jpg" alt="Ortu Embedded 2: Ibu Pembina, Ustadz & Mahasiswa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-purple-700 text-white font-bold">
+                        👨‍👩‍👦 Orang Tua (Tokoh Embedded)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Ortu Embedded 2: Ibu Pembina, Ustadz & Mahasiswa</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Ibu pendidik syar'i & Ustadz pembina mendampingi mahasiswa ITB berlatar Ka'bah, Kubah Hijau Nabawi, & KAUST. Penekanan laporan harian WA.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_EMBEDDED_ORTU_2_PEMBINA_DAN_MAHASISWA.jpg', 'Ortu Embedded 2: Ibu Pembina, Ustadz & Mahasiswa')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_EMBEDDED_ORTU_2_PEMBINA_DAN_MAHASISWA.jpg" download="POSTER_EMBEDDED_ORTU_2_PEMBINA_DAN_MAHASISWA.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="umum embedded">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_EMBEDDED_UMUM_1_PAKAR_DAN_SEJARAWAN.jpg', 'Umum Embedded 1: Ulama Fiqih & Sejarawan Jabal Nur')">
+                <img src="download/POSTER_EMBEDDED_UMUM_1_PAKAR_DAN_SEJARAWAN.jpg" alt="Umum Embedded 1: Ulama Fiqih & Sejarawan Jabal Nur" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-emerald-700 text-white font-bold">
+                        🌍 Umum (Tokoh Embedded)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Umum Embedded 1: Ulama Fiqih & Sejarawan Jabal Nur</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Ulama pakar fiqih koko putih & pakar sejarah peradaban berjas cokelat berlatar Museum Wahyu Hira Jabal Nur, Ka'bah, & Nabawi.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_EMBEDDED_UMUM_1_PAKAR_DAN_SEJARAWAN.jpg', 'Umum Embedded 1: Ulama Fiqih & Sejarawan Jabal Nur')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_EMBEDDED_UMUM_1_PAKAR_DAN_SEJARAWAN.jpg" download="POSTER_EMBEDDED_UMUM_1_PAKAR_DAN_SEJARAWAN.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="umum embedded">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_EMBEDDED_UMUM_2_EKSEKUTIF_DAN_SAINTIS.jpg', 'Umum Embedded 2: Tokoh Eksekutif & Saintis Diaspora')">
+                <img src="download/POSTER_EMBEDDED_UMUM_2_EKSEKUTIF_DAN_SAINTIS.jpg" alt="Umum Embedded 2: Tokoh Eksekutif & Saintis Diaspora" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-teal-700 text-white font-bold">
+                        🌍 Umum (Tokoh Embedded)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Umum Embedded 2: Tokoh Eksekutif & Saintis Diaspora</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Tokoh eksekutif berpeci & setelan navy mewah bersama saintis diaspora di teras malam Ka'bah, kampus kaca KAUST, & perpustakaan Doha.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_EMBEDDED_UMUM_2_EKSEKUTIF_DAN_SAINTIS.jpg', 'Umum Embedded 2: Tokoh Eksekutif & Saintis Diaspora')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_EMBEDDED_UMUM_2_EKSEKUTIF_DAN_SAINTIS.jpg" download="POSTER_EMBEDDED_UMUM_2_EKSEKUTIF_DAN_SAINTIS.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="mahasiswa speaker">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_SPEAKER_MHS_1_SAINS_RUHIYAH.jpg', 'Pemateri Mhs 1: Keynote KAUST & Spiritual Mentor')">
+                <img src="download/POSTER_SPEAKER_MHS_1_SAINS_RUHIYAH.jpg" alt="Pemateri Mhs 1: Keynote KAUST & Spiritual Mentor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-blue-100 text-blue-900 border-blue-300 font-bold">
+                        🎓 Mahasiswa ITB (Keynote KAUST)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Pemateri Mhs 1: Keynote KAUST & Spiritual Mentor</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Konsep 2 frame siluet tokoh: Keynote Speaker (KAUST Research Fellow) & Spiritual Mentor (Pembimbing Salman ITB) berlatar Ka'bah & kampus KAUST.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_SPEAKER_MHS_1_SAINS_RUHIYAH.jpg', 'Pemateri Mhs 1: Keynote KAUST & Spiritual Mentor')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_SPEAKER_MHS_1_SAINS_RUHIYAH.jpg" download="POSTER_SPEAKER_MHS_1_SAINS_RUHIYAH.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="mahasiswa speaker">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_SPEAKER_MHS_2_GLOBAL_SCHOLAR.jpg', 'Pemateri Mhs 2: Diaspora Qatar & UIM Scholar')">
+                <img src="download/POSTER_SPEAKER_MHS_2_GLOBAL_SCHOLAR.jpg" alt="Pemateri Mhs 2: Diaspora Qatar & UIM Scholar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-emerald-100 text-emerald-900 border-emerald-300 font-bold">
+                        🎓 Mahasiswa ITB (Global Career)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Pemateri Mhs 2: Diaspora Qatar & UIM Scholar</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Konsep 3 frame kubah siluet narasumber: Diaspora Energi Alumni ITB Qatar, Academic Speaker UIM/Umm Al-Qura, dan Youth Mentor Salman ITB berlatar QNL Doha.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_SPEAKER_MHS_2_GLOBAL_SCHOLAR.jpg', 'Pemateri Mhs 2: Diaspora Qatar & UIM Scholar')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_SPEAKER_MHS_2_GLOBAL_SCHOLAR.jpg" download="POSTER_SPEAKER_MHS_2_GLOBAL_SCHOLAR.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="orangtua speaker">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_SPEAKER_ORTU_1_INVESTASI_ANANDA.jpg', 'Pemateri Ortu 1: Dewan Syariah & Visiting Professor')">
+                <img src="download/POSTER_SPEAKER_ORTU_1_INVESTASI_ANANDA.jpg" alt="Pemateri Ortu 1: Dewan Syariah & Visiting Professor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-rose-100 text-rose-900 border-rose-300 font-bold">
+                        👨‍👩‍👦 Orang Tua (Mentorship Ulama & Pakar)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Pemateri Ortu 1: Dewan Syariah & Visiting Professor</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Konsep 2 frame emas elegan: Ulama Senior Dewan Syariah KBIHU Salman ITB & Visiting Professor KAUST/Alumni ITB berlatar Ka'bah & KAUST.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_SPEAKER_ORTU_1_INVESTASI_ANANDA.jpg', 'Pemateri Ortu 1: Dewan Syariah & Visiting Professor')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_SPEAKER_ORTU_1_INVESTASI_ANANDA.jpg" download="POSTER_SPEAKER_ORTU_1_INVESTASI_ANANDA.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="orangtua speaker">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_SPEAKER_ORTU_2_GENERASI_CENDIKIA.jpg', 'Pemateri Ortu 2: Trio Mentor Karir & Beasiswa Ananda')">
+                <img src="download/POSTER_SPEAKER_ORTU_2_GENERASI_CENDIKIA.jpg" alt="Pemateri Ortu 2: Trio Mentor Karir & Beasiswa Ananda" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-purple-100 text-purple-900 border-purple-300 font-bold">
+                        👨‍👩‍👦 Orang Tua (Generasi Cendikia)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Pemateri Ortu 2: Trio Mentor Karir & Beasiswa Ananda</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Konsep 3 kartu siluet mentor: Pembimbing Ibadah & Karakter Salman ITB, Mentor Beasiswa KAUST, dan Mentor Karir Alumni Qatar. Info laporan berkala WA.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_SPEAKER_ORTU_2_GENERASI_CENDIKIA.jpg', 'Pemateri Ortu 2: Trio Mentor Karir & Beasiswa Ananda')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_SPEAKER_ORTU_2_GENERASI_CENDIKIA.jpg" download="POSTER_SPEAKER_ORTU_2_GENERASI_CENDIKIA.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="umum speaker">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_SPEAKER_UMUM_1_JEJAK_PERADABAN.jpg', 'Pemateri Umum 1: Pakar Fiqih & Kurator Museum Wahyu')">
+                <img src="download/POSTER_SPEAKER_UMUM_1_JEJAK_PERADABAN.jpg" alt="Pemateri Umum 1: Pakar Fiqih & Kurator Museum Wahyu" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-amber-100 text-amber-900 border-amber-300 font-bold">
+                        🌍 Khalayak Umum & Sejarah
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Pemateri Umum 1: Pakar Fiqih & Kurator Museum Wahyu</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Konsep 2 frame kubah emas ornamen islami: Ulama Pakar Fiqih Salman ITB & Kurator Museum Wahyu Hira Cultural District / Peneliti Umm Al-Qura.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_SPEAKER_UMUM_1_JEJAK_PERADABAN.jpg', 'Pemateri Umum 1: Pakar Fiqih & Kurator Museum Wahyu')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_SPEAKER_UMUM_1_JEJAK_PERADABAN.jpg" download="POSTER_SPEAKER_UMUM_1_JEJAK_PERADABAN.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="umum speaker">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_SPEAKER_UMUM_2_HARMONI_SAINS.jpg', 'Pemateri Umum 2: Cendekiawan Muslim & Diaspora Sains')">
+                <img src="download/POSTER_SPEAKER_UMUM_2_HARMONI_SAINS.jpg" alt="Pemateri Umum 2: Cendekiawan Muslim & Diaspora Sains" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-cyan-100 text-cyan-900 border-cyan-300 font-bold">
+                        🌍 Profesional & Keluarga
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Pemateri Umum 2: Cendekiawan Muslim & Diaspora Sains</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Konsep 3 frame eksekutif modern mewah: Cendekiawan Muslim Salman ITB, Peneliti Diaspora KAUST, dan Tokoh Diaspora Qatar berlatar Ka'bah & arsitektur KAUST.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_SPEAKER_UMUM_2_HARMONI_SAINS.jpg', 'Pemateri Umum 2: Cendekiawan Muslim & Diaspora Sains')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_SPEAKER_UMUM_2_HARMONI_SAINS.jpg" download="POSTER_SPEAKER_UMUM_2_HARMONI_SAINS.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="mahasiswa">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_MHS_1_SAHABAT_SAFAR.jpg', 'Mhs 1: Sahabat Satu Safar (Quad Room)')">
+                <img src="download/POSTER_MHS_1_SAHABAT_SAFAR.jpg" alt="Mhs 1: Sahabat Satu Safar (Quad Room)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-blue-100 text-blue-800 border-blue-200">
+                        🎓 Mahasiswa ITB (Squad Kampus)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Mhs 1: Sahabat Satu Safar (Quad Room)</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Empat sahabat mahasiswa/i ITB berjalan penuh semangat di depan Ka'bah keemasan & kampus riset KAUST. Paket berempat Rp 36 Juta.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_MHS_1_SAHABAT_SAFAR.jpg', 'Mhs 1: Sahabat Satu Safar (Quad Room)')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_MHS_1_SAHABAT_SAFAR.jpg" download="POSTER_MHS_1_SAHABAT_SAFAR.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="mahasiswa">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_MHS_2_STEM_INNOVATOR.jpg', 'Mhs 2: STEM Innovator & Diaspora Qatar')">
+                <img src="download/POSTER_MHS_2_STEM_INNOVATOR.jpg" alt="Mhs 2: STEM Innovator & Diaspora Qatar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-cyan-100 text-cyan-800 border-cyan-200">
+                        🎓 Mahasiswa ITB (Teknik & Riset)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Mhs 2: STEM Innovator & Diaspora Qatar</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Mahasiswa teknik berlatar waterfront KAUST, Ka'bah suci, & kereta cepat Haramain 300 km/jam. Info beasiswa KAUST & networking alumni.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_MHS_2_STEM_INNOVATOR.jpg', 'Mhs 2: STEM Innovator & Diaspora Qatar')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_MHS_2_STEM_INNOVATOR.jpg" download="POSTER_MHS_2_STEM_INNOVATOR.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="mahasiswa">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_MHS_3_CENDIKIA_MUSLIMAH.jpg', 'Mhs 3: Jejak Cendikia Muslimah (QNL)')">
+                <img src="download/POSTER_MHS_3_CENDIKIA_MUSLIMAH.jpg" alt="Mhs 3: Jejak Cendikia Muslimah (QNL)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-emerald-100 text-emerald-800 border-emerald-200">
+                        🎓 Mahasiswi & Muslimah Intelektual
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Mhs 3: Jejak Cendikia Muslimah (QNL)</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Mahasiswi berhijab anggun di kemegahan Qatar National Library & Raudhah Madinah. Fiqih wanita Salman ITB & fasilitas all-inclusive.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_MHS_3_CENDIKIA_MUSLIMAH.jpg', 'Mhs 3: Jejak Cendikia Muslimah (QNL)')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_MHS_3_CENDIKIA_MUSLIMAH.jpg" download="POSTER_MHS_3_CENDIKIA_MUSLIMAH.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="orangtua">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_OPSI_1_VISIONARY_SCHOLAR.jpg', 'Ortu 1: The Visionary Scholar (Restu Doa)')">
+                <img src="download/POSTER_OPSI_1_VISIONARY_SCHOLAR.jpg" alt="Ortu 1: The Visionary Scholar (Restu Doa)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-rose-100 text-rose-800 border-rose-200">
+                        👨‍👩‍👦 Orang Tua (Sentuhan Doa)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Ortu 1: The Visionary Scholar (Restu Doa)</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Mahasiswa berwibawa 22 tahun menatap masa depan, dinaungi siluet doa transparan orang tua di langit keemasan Ka'bah. Investasi Rp 36 Juta.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_OPSI_1_VISIONARY_SCHOLAR.jpg', 'Ortu 1: The Visionary Scholar (Restu Doa)')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_OPSI_1_VISIONARY_SCHOLAR.jpg" download="POSTER_OPSI_1_VISIONARY_SCHOLAR.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="orangtua">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_OPSI_2_FUTURE_RESEARCHERS.jpg', 'Ortu 2: Future Researchers (Putra & Putri)')">
+                <img src="download/POSTER_OPSI_2_FUTURE_RESEARCHERS.jpg" alt="Ortu 2: Future Researchers (Putra & Putri)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-purple-100 text-purple-800 border-purple-200">
+                        👨‍👩‍👦 Orang Tua Mahasiswa
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Ortu 2: Future Researchers (Putra & Putri)</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Duo mahasiswa & mahasiswi berjaket ITB di depan Ka'bah, KAUST, dan kereta cepat. Karakter shalih, beasiswa S2 luar negeri & amanah.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_OPSI_2_FUTURE_RESEARCHERS.jpg', 'Ortu 2: Future Researchers (Putra & Putri)')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_OPSI_2_FUTURE_RESEARCHERS.jpg" download="POSTER_OPSI_2_FUTURE_RESEARCHERS.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="orangtua">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_OPSI_3_DOA_ORANG_TUA.jpg', 'Ortu 3: Doa Tulus di Safar Mandiri')">
+                <img src="download/POSTER_OPSI_3_DOA_ORANG_TUA.jpg" alt="Ortu 3: Doa Tulus di Safar Mandiri" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-orange-100 text-orange-800 border-orange-200">
+                        👨‍👩‍👦 Orang Tua (Kemandirian)
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Ortu 3: Doa Tulus di Safar Mandiri</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Langkah mandiri membawa koper di stasiun kereta cepat menuju KAUST & Tanah Suci, dinaungi restu ayah-ibu. Layanan laporan WA harian.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_OPSI_3_DOA_ORANG_TUA.jpg', 'Ortu 3: Doa Tulus di Safar Mandiri')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_OPSI_3_DOA_ORANG_TUA.jpg" download="POSTER_OPSI_3_DOA_ORANG_TUA.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="umum">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_UMUM_1_KELUARGA_PERADABAN.jpg', 'Umum 1: Safar Berkah Bersama Keluarga')">
+                <img src="download/POSTER_UMUM_1_KELUARGA_PERADABAN.jpg" alt="Umum 1: Safar Berkah Bersama Keluarga" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-amber-100 text-amber-800 border-amber-200">
+                        🌍 Khalayak Umum & Keluarga
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Umum 1: Safar Berkah Bersama Keluarga</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Keluarga muslim Indonesia bahagia berbusana putih di pelataran Ka'bah, KAUST tepi Laut Merah & kereta cepat. Pilihan Quad/Triple/Double.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_UMUM_1_KELUARGA_PERADABAN.jpg', 'Umum 1: Safar Berkah Bersama Keluarga')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_UMUM_1_KELUARGA_PERADABAN.jpg" download="POSTER_UMUM_1_KELUARGA_PERADABAN.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="umum">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_UMUM_2_EKSEKUTIF_SAINS.jpg', 'Umum 2: Harmoni Iman & Sains (Eksekutif)')">
+                <img src="download/POSTER_UMUM_2_EKSEKUTIF_SAINS.jpg" alt="Umum 2: Harmoni Iman & Sains (Eksekutif)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-blue-100 text-blue-800 border-blue-200">
+                        🌍 Profesional & Cendekia
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Umum 2: Harmoni Iman & Sains (Eksekutif)</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Arsitektur modern eksekutif: Ka'bah & Masjid Nabawi bersanding dengan KAUST, QNL Doha, dan kereta cepat Haramain. Paket Rp 36-39,5 Jt.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_UMUM_2_EKSEKUTIF_SAINS.jpg', 'Umum 2: Harmoni Iman & Sains (Eksekutif)')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_UMUM_2_EKSEKUTIF_SAINS.jpg" download="POSTER_UMUM_2_EKSEKUTIF_SAINS.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="umum">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_UMUM_3_JEJAK_WAHYU.jpg', 'Umum 3: Jejak Wahyu & Napak Tilas Peradaban')">
+                <img src="download/POSTER_UMUM_3_JEJAK_WAHYU.jpg" alt="Umum 3: Jejak Wahyu & Napak Tilas Peradaban" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-emerald-100 text-emerald-800 border-emerald-200">
+                        🌍 Jamaah Umum & Sejarah
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Umum 3: Jejak Wahyu & Napak Tilas Peradaban</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Ziarah mendalam: Museum Hira di kaki Jabal Nur, Umm Al-Qura, UIM Madinah, hingga riset masa depan KAUST & Doha.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_UMUM_3_JEJAK_WAHYU.jpg', 'Umum 3: Jejak Wahyu & Napak Tilas Peradaban')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_UMUM_3_JEJAK_WAHYU.jpg" download="POSTER_UMUM_3_JEJAK_WAHYU.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="tambahan">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_MHS_4_RECHARGE_RUHIYAH.jpg', 'Varian Ekstra: Recharge Ruhiyah Mahasiswa')">
+                <img src="download/POSTER_MHS_4_RECHARGE_RUHIYAH.jpg" alt="Varian Ekstra: Recharge Ruhiyah Mahasiswa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-slate-100 text-slate-700 border-slate-200">
+                        📁 Desain Tambahan
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Varian Ekstra: Recharge Ruhiyah Mahasiswa</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Split view thawaf subuh di Ka'bah dan inovasi sains waterfront KAUST.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_MHS_4_RECHARGE_RUHIYAH.jpg', 'Varian Ekstra: Recharge Ruhiyah Mahasiswa')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_MHS_4_RECHARGE_RUHIYAH.jpg" download="POSTER_MHS_4_RECHARGE_RUHIYAH.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="tambahan">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_MHS_5_SAFAR_PERADABAN.jpg', 'Varian Ekstra: Ekspedisi Peradaban Mahasiswa')">
+                <img src="download/POSTER_MHS_5_SAFAR_PERADABAN.jpg" alt="Varian Ekstra: Ekspedisi Peradaban Mahasiswa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-slate-100 text-slate-700 border-slate-200">
+                        📁 Desain Tambahan
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Varian Ekstra: Ekspedisi Peradaban Mahasiswa</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Dua mahasiswa di dek observasi menatap panorama Education City Doha & Ka'bah.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_MHS_5_SAFAR_PERADABAN.jpg', 'Varian Ekstra: Ekspedisi Peradaban Mahasiswa')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_MHS_5_SAFAR_PERADABAN.jpg" download="POSTER_MHS_5_SAFAR_PERADABAN.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="tambahan">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_OPSI_4_ARSITEKTUR_MINIMALIS.jpg', 'Varian Ekstra: Arsitektur Minimalis Orang Tua')">
+                <img src="download/POSTER_OPSI_4_ARSITEKTUR_MINIMALIS.jpg" alt="Varian Ekstra: Arsitektur Minimalis Orang Tua" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-slate-100 text-slate-700 border-slate-200">
+                        📁 Desain Tambahan
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Varian Ekstra: Arsitektur Minimalis Orang Tua</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Ka'bah & Kubah Hijau di atas, kampus futuristik KAUST & kereta cepat di bawah.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_OPSI_4_ARSITEKTUR_MINIMALIS.jpg', 'Varian Ekstra: Arsitektur Minimalis Orang Tua')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_OPSI_4_ARSITEKTUR_MINIMALIS.jpg" download="POSTER_OPSI_4_ARSITEKTUR_MINIMALIS.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="tambahan">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_OPSI_5_NETWORKING_GLOBAL.jpg', 'Varian Ekstra: Networking Global Orang Tua')">
+                <img src="download/POSTER_OPSI_5_NETWORKING_GLOBAL.jpg" alt="Varian Ekstra: Networking Global Orang Tua" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-slate-100 text-slate-700 border-slate-200">
+                        📁 Desain Tambahan
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Varian Ekstra: Networking Global Orang Tua</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Diskusi mahasiswa dengan diaspora senior di Education City & KAUST.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_OPSI_5_NETWORKING_GLOBAL.jpg', 'Varian Ekstra: Networking Global Orang Tua')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_OPSI_5_NETWORKING_GLOBAL.jpg" download="POSTER_OPSI_5_NETWORKING_GLOBAL.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="poster-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col group" data-category="tambahan">
+            <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('/download/POSTER_UMRAH_MAHASISWA_ITB_2027.jpg', 'Varian Ekstra: Edisi Almamater ITB Ganesha')">
+                <img src="download/POSTER_UMRAH_MAHASISWA_ITB_2027.jpg" alt="Varian Ekstra: Edisi Almamater ITB Ganesha" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="bg-white/95 backdrop-blur text-gray-900 text-xs font-bold px-3.5 py-2 rounded-full shadow flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        Perbesar Poster
+                    </span>
+                </div>
+                <div class="absolute top-3 left-3">
+                    <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border shadow-sm backdrop-blur bg-slate-100 text-slate-700 border-slate-200">
+                        📁 Desain Tambahan
+                    </span>
+                </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-sm leading-snug">Varian Ekstra: Edisi Almamater ITB Ganesha</h3>
+                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">Gaya energik mahasiswa ITB berjaket almamater biru.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button onclick="openLightbox('/download/POSTER_UMRAH_MAHASISWA_ITB_2027.jpg', 'Varian Ekstra: Edisi Almamater ITB Ganesha')" class="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition text-center">
+                        👁️ Pratinjau
+                    </button>
+                    <a href="download/POSTER_UMRAH_MAHASISWA_ITB_2027.jpg" download="POSTER_UMRAH_MAHASISWA_ITB_2027.jpg" class="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition text-center shadow-sm">
+                        ⬇️ Unduh HD
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+    </main>
+
+    <!-- Modal Lightbox for Poster Preview -->
+    <div id="lightbox" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 md:p-6" onclick="closeLightbox()">
+        <div class="bg-white rounded-2xl max-w-xl w-full max-h-[92vh] overflow-hidden flex flex-col shadow-2xl relative" onclick="event.stopPropagation()">
+            <div class="p-3.5 border-b border-gray-100 flex items-center justify-between bg-slate-50">
+                <h3 id="lightboxTitle" class="font-bold text-gray-900 text-sm truncate">Pratinjau Poster</h3>
+                <button onclick="closeLightbox()" class="w-7 h-7 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 flex items-center justify-center font-bold text-xs">✕</button>
+            </div>
+            <div class="p-3 overflow-y-auto flex-1 flex items-center justify-center bg-slate-950">
+                <img id="lightboxImg" src="" alt="Poster Preview" class="max-h-[72vh] object-contain rounded-lg shadow-xl">
+            </div>
+            <div class="p-3.5 border-t border-gray-100 flex items-center justify-between gap-3 bg-slate-50">
+                <button onclick="closeLightbox()" class="px-4 py-2 text-xs font-semibold text-gray-600 hover:bg-gray-200 rounded-lg">Tutup</button>
+                <a id="lightboxDownload" href="#" download class="px-4 py-2 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow">Unduh Gambar HD</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-6 text-xs text-gray-400">
+        &copy; 2026 - 2027 KBIHU Salman ITB & Khalifah Tour. Sistem Server Berkas & Rundown Wi-Fi Port 8080.
+    </footer>
+
+    <script>
+        function filterCategory(cat) {
+            const cards = document.querySelectorAll('.poster-card');
+            cards.forEach(c => {
+                const itemCat = c.getAttribute('data-category') || '';
+                if (cat === 'all') {
+                    c.style.display = (!itemCat.includes('tambahan')) ? '' : 'none';
+                } else if (itemCat.includes(cat)) {
+                    c.style.display = '';
+                } else {
+                    c.style.display = 'none';
+                }
+            });
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.className = 'filter-btn px-3.5 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold rounded-xl transition';
+            });
+            const activeBtn = document.getElementById('btn-' + cat);
+            if (activeBtn) {
+                activeBtn.className = 'filter-btn px-3.5 py-1.5 bg-blue-600 text-white text-xs font-bold rounded-xl transition shadow-sm';
+            }
+        }
+
+        // Initialize default view to 9 core posters
+        document.addEventListener('DOMContentLoaded', () => {
+            filterCategory('embedded');
+        });
+        filterCategory('embedded');
+
+        function openLightbox(imgSrc, title) {
+            document.getElementById('lightboxImg').src = imgSrc;
+            document.getElementById('lightboxTitle').innerText = title;
+            document.getElementById('lightboxDownload').href = imgSrc;
+            document.getElementById('lightboxDownload').setAttribute('download', imgSrc.split('/').pop());
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brosur & Poster Informasi Lengkap - Umrah Edutour 2027</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; color: black; }
+            .print-page { box-shadow: none !important; border: none !important; margin: 0 !important; width: 100% !important; max-width: 100% !important; padding: 0 !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen">
+    <!-- Header (no-print) -->
+    <header class="no-print bg-gradient-to-r from-blue-900 via-indigo-900 to-teal-900 text-white shadow-lg sticky top-0 z-30">
+        <div class="max-w-5xl mx-auto px-4 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="p-2 bg-white/10 hover:bg-white/20 rounded-xl transition flex items-center gap-1.5 text-xs font-semibold">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Rundown</span>
+                </a>
+                <a href="poster.html" class="p-2 bg-white/10 hover:bg-white/20 rounded-xl transition flex items-center gap-1.5 text-xs font-semibold">
+                    <span>🎨 Galeri Poster</span>
+                </a>
+                <div>
+                    <h1 class="text-sm md:text-base font-bold tracking-tight">Poster & Brosur Informasi Lengkap</h1>
+                    <p class="text-[10px] text-blue-200">Format 1 Halaman Berisi Rincian Teknis & Fasilitas</p>
+                </div>
+            </div>
+            <button onclick="window.print()" class="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold text-xs rounded-xl shadow transition flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                <span>Cetak / Simpan PDF</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-6 space-y-6">
+        <!-- Target Audience Selector Tabs (no-print) -->
+        <div class="no-print bg-white rounded-2xl p-3 shadow-sm border border-slate-200 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-gray-700">Pilih Edisi Informasi:</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+                <button onclick="switchTab('mhs')" id="tab-btn-mhs" class="tab-btn px-4 py-2 bg-blue-600 text-white font-bold text-xs rounded-xl shadow-sm transition">
+                    🎓 Edisi Mahasiswa ITB
+                </button>
+                <button onclick="switchTab('ortu')" id="tab-btn-ortu" class="tab-btn px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold text-xs rounded-xl transition">
+                    👨‍👩‍👦 Edisi Orang Tua Mahasiswa
+                </button>
+                <button onclick="switchTab('umum')" id="tab-btn-umum" class="tab-btn px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold text-xs rounded-xl transition">
+                    🌍 Edisi Khalayak Umum & Keluarga
+                </button>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- EDISI 1: MAHASISWA ITB                     -->
+        <!-- ========================================== -->
+        <div id="tab-mhs" class="tab-content print-page bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden">
+            <!-- Header Poster -->
+            <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white p-6 relative">
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-white text-blue-900 rounded-xl flex items-center justify-center font-black text-xl shadow">S</div>
+                        <div>
+                            <p class="text-xs font-extrabold tracking-wider uppercase text-blue-300">KBIHU Salman ITB & Travel Partner</p>
+                            <p class="text-sm font-bold text-white">Kerjasama Resmi Bersama Khalifah Tour</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="bg-amber-400 text-gray-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Edisi Khusus Mahasiswa</span>
+                        <span class="bg-white/10 text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/20">11 Hari Safar</span>
+                    </div>
+                </div>
+
+                <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                    <div class="md:col-span-2 space-y-2">
+                        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight leading-tight">
+                            UMRAH RIHLAH ILMI 2027
+                        </h2>
+                        <p class="text-blue-200 text-xs md:text-sm leading-relaxed">
+                            Harmoni Ruhiyah di Tanah Suci & Eksplorasi Sains Dunia di KAUST, Umm Al-Qura, UIM Madinah & Qatar.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-2 pt-2 text-[11px]">
+                            <span class="bg-blue-800/80 text-blue-100 px-3 py-1 rounded-lg border border-blue-700">🗓️ 02 - 12 Januari 2027</span>
+                            <span class="bg-blue-800/80 text-blue-100 px-3 py-1 rounded-lg border border-blue-700">✈️ Qatar Airways Bintang 5</span>
+                            <span class="bg-blue-800/80 text-blue-100 px-3 py-1 rounded-lg border border-blue-700">🚅 Kereta Cepat 300 Km/Jam</span>
+                        </div>
+                    </div>
+                    <!-- Price Box Mahasiswa -->
+                    <div class="bg-gradient-to-br from-amber-400 to-amber-500 text-gray-950 p-4 rounded-2xl shadow-xl text-center md:text-right flex flex-col justify-center">
+                        <p class="text-[11px] font-bold uppercase tracking-wider text-amber-950">Paket Mahasiswa (Kamar Quad)</p>
+                        <p class="text-2xl md:text-3xl font-black tracking-tight text-gray-950 mt-0.5">Rp 36.000.000</p>
+                        <p class="text-[10px] font-semibold text-amber-900 mt-1">Full Board • Sekamar Berempat • All-In</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Grid Mahasiswa -->
+            <div class="p-6 space-y-6">
+                <!-- 5 Highlight Khusus Mahasiswa -->
+                <div>
+                    <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider flex items-center gap-2 mb-3">
+                        <span class="w-2.5 h-2.5 bg-blue-600 rounded-full"></span>
+                        5 Agenda Utama & Value Rihlah Ilmi untuk Mahasiswa ITB:
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+                        <div class="p-3.5 bg-blue-50/60 rounded-xl border border-blue-100">
+                            <p class="text-xs font-bold text-blue-900 flex items-center gap-1.5">🔬 1. Kunjungan Riset KAUST Thuwal</p>
+                            <p class="text-[11px] text-gray-600 mt-1 leading-relaxed">Meninjau fasilitas laboratorium kelautan, superkomputer Shaheen, dan informasi peluang beasiswa penuh S2/S3 (KAUST Fellowship).</p>
+                        </div>
+                        <div class="p-3.5 bg-indigo-50/60 rounded-xl border border-indigo-100">
+                            <p class="text-xs font-bold text-indigo-900 flex items-center gap-1.5">🏛️ 2. Education City & QNL Doha</p>
+                            <p class="text-[11px] text-gray-600 mt-1 leading-relaxed">Eksplorasi cabang kampus Ivy League (Carnegie Mellon, Texas A&M, Georgetown) dan arsitektur perpustakaan termodern di Timur Tengah.</p>
+                        </div>
+                        <div class="p-3.5 bg-teal-50/60 rounded-xl border border-teal-100">
+                            <p class="text-xs font-bold text-teal-900 flex items-center gap-1.5">🤝 3. Networking Diaspora Alumni ITB</p>
+                            <p class="text-[11px] text-gray-600 mt-1 leading-relaxed">Sharing session langsung dengan para insinyur dan profesional senior Ikatan Alumni ITB (IA-ITB) di Qatar (industri energi & teknologi).</p>
+                        </div>
+                        <div class="p-3.5 bg-amber-50/60 rounded-xl border border-amber-100">
+                            <p class="text-xs font-bold text-amber-900 flex items-center gap-1.5">🕋 4. Ibadah Khusyuk & Manasik Salman</p>
+                            <p class="text-[11px] text-gray-600 mt-1 leading-relaxed">Bimbingan manasik intensif dari asatidz Salman ITB, 2x umrah (Miqat KAUST/Qarnul Manazil & Ji'ranah), ziarah Raudhah & makam Rasulullah SAW.</p>
+                        </div>
+                        <div class="p-3.5 bg-emerald-50/60 rounded-xl border border-emerald-100">
+                            <p class="text-xs font-bold text-emerald-900 flex items-center gap-1.5">🚅 5. Kereta Cepat Haramain</p>
+                            <p class="text-[11px] text-gray-600 mt-1 leading-relaxed">Merasakan langsung mahakarya teknologi transportasi kereta peluru berkecepatan 300 km/jam melintasi gurun dari Makkah ke Madinah.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col justify-center">
+                            <p class="text-xs font-bold text-gray-900 flex items-center gap-1.5">📜 Sertifikat Rihlah Ilmiah</p>
+                            <p class="text-[11px] text-gray-600 mt-1 leading-relaxed">Setiap peserta mahasiswa memperoleh sertifikat resmi keikutsertaan ekspedisi sains & dakwah internasional Salman ITB.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fasilitas & Detail Teknis -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 border-t border-gray-100">
+                    <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200">
+                        <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">✅ Fasilitas Termasuk (All-Inclusive):</h4>
+                        <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                            <li>Tiket Pesawat PP Qatar Airways (Bagasi 25 kg + Kabin 7 kg)</li>
+                            <li>Visa Umrah Resmi & Asuransi Perjalanan Arab Saudi</li>
+                            <li>Tiket Kereta Cepat Haramain (Makkah ke Madinah)</li>
+                            <li>Hotel Bintang 3: Al-Masa Badr Makkah & Al Mukhtara Al Gharbi Madinah</li>
+                            <li>Makan 3x sehari Full Board (Menu Masakan Indonesia)</li>
+                            <li>Bimbingan Ibadah & Muthawif resmi Salman ITB</li>
+                            <li>Air Zam-zam 5 Liter & Perlengkapan Safar Lengkap</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">📋 Ketentuan & Info Mahasiswa:</h4>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Terbuka untuk mahasiswa aktif S1/S2/S3 (atau fresh graduate).</li>
+                                <li>Paket sekamar berempat (Quad Room) khusus mahasiswa.</li>
+                                <li>Pendampingan pengurusan paspor bagi yang belum memiliki paspor.</li>
+                                <li>Opsi skema komitmen & tabungan bertahap.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-100/70 rounded-xl text-[11px] text-blue-900 font-medium">
+                            📍 <strong>Sekretariat Pendaftaran:</strong> Kantor KBIHU Salman ITB, Kompleks Masjid Salman ITB, Jl. Ganesha No. 7, Bandung.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- EDISI 2: ORANG TUA MAHASISWA               -->
+        <!-- ========================================== -->
+        <div id="tab-ortu" class="tab-content print-page bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hidden">
+            <!-- Header Poster Ortu -->
+            <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-900 text-white p-6 relative">
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-white text-indigo-950 rounded-xl flex items-center justify-center font-black text-xl shadow">S</div>
+                        <div>
+                            <p class="text-xs font-extrabold tracking-wider uppercase text-amber-300">KBIHU Salman ITB & Khalifah Tour</p>
+                            <p class="text-sm font-bold text-white">Penyelenggara Resmi Berizin Kementerian Agama RI</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Edisi Khusus Orang Tua</span>
+                        <span class="bg-white/10 text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/20">Investasi Masa Depan</span>
+                    </div>
+                </div>
+
+                <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                    <div class="md:col-span-2 space-y-2">
+                        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight leading-tight">
+                            HADIAH TERBAIK UNTUK PUTRA-PUTRI ANDA
+                        </h2>
+                        <p class="text-indigo-200 text-xs md:text-sm leading-relaxed">
+                            Program Safar Umrah Edutour 2027: Membina Tauhid yang Kokoh, Akhlak Mulia, dan Membuka Gerbang Beasiswa Sains Global.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-2 pt-2 text-[11px]">
+                            <span class="bg-indigo-900/80 text-indigo-100 px-3 py-1 rounded-lg border border-indigo-700">🗓️ 02 - 12 Januari 2027</span>
+                            <span class="bg-indigo-900/80 text-indigo-100 px-3 py-1 rounded-lg border border-indigo-700">✈️ Qatar Airways Bintang 5</span>
+                            <span class="bg-indigo-900/80 text-indigo-100 px-3 py-1 rounded-lg border border-indigo-700">🛡️ Bimbingan Penuh Salman ITB</span>
+                        </div>
+                    </div>
+                    <!-- Price Box Ortu -->
+                    <div class="bg-gradient-to-br from-amber-400 to-amber-500 text-gray-950 p-4 rounded-2xl shadow-xl text-center md:text-right flex flex-col justify-center">
+                        <p class="text-[11px] font-bold uppercase tracking-wider text-amber-950">Investasi Pendidikan & Ruhiyah</p>
+                        <p class="text-2xl md:text-3xl font-black tracking-tight text-gray-950 mt-0.5">Rp 36.000.000</p>
+                        <p class="text-[10px] font-semibold text-amber-900 mt-1">Paket Quad Mahasiswa • All-Inclusive</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Grid Ortu -->
+            <div class="p-6 space-y-6">
+                <!-- 4 Nilai Utama Penenang Orang Tua -->
+                <div>
+                    <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider flex items-center gap-2 mb-3">
+                        <span class="w-2.5 h-2.5 bg-emerald-600 rounded-full"></span>
+                        Mengapa Ini Menjadi Investasi Terbaik Orang Tua untuk Buah Hati?
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-emerald-50/60 rounded-2xl border border-emerald-100 space-y-1">
+                            <h4 class="text-xs font-bold text-emerald-950 flex items-center gap-1.5">📿 1. Pembinaan Karakter & Tauhid yang Amanah</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">Putra-putri Anda tidak dilepas sendirian. Mereka dibimbing intensif oleh Asatidz dan Pembina senior dari Masjid Salman ITB yang berpengalaman mencetak generasi cendekia muslim berakhlak mulia.</p>
+                        </div>
+                        <div class="p-4 bg-blue-50/60 rounded-2xl border border-blue-100 space-y-1">
+                            <h4 class="text-xs font-bold text-blue-950 flex items-center gap-1.5">🎓 2. Membuka Akses Beasiswa S2/S3 Luar Negeri</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">Mengunjungi langsung King Abdullah University (KAUST) di Thuwal dan Education City Doha yang sangat royal mendanai beasiswa riset penuh. Menanamkan visi studi lanjut kelas dunia bagi anak.</p>
+                        </div>
+                        <div class="p-4 bg-indigo-50/60 rounded-2xl border border-indigo-100 space-y-1">
+                            <h4 class="text-xs font-bold text-indigo-950 flex items-center gap-1.5">🤝 3. Lingkungan Shalih & Mentor Berkelas</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">Berada dalam lingkaran pertemanan positif sesama mahasiswa berprestasi satu almamater, serta dipertemukan dengan para senior Diaspora Alumni ITB di Qatar untuk inspirasi karir global.</p>
+                        </div>
+                        <div class="p-4 bg-amber-50/60 rounded-2xl border border-amber-100 space-y-1">
+                            <h4 class="text-xs font-bold text-amber-950 flex items-center gap-1.5">🛡️ 4. Keamanan & Kenyamanan Eksekutif Terjamin</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">Menggunakan maskapai bintang lima Qatar Airways, hotel bintang 4 dekat masjid, kereta cepat Haramain yang bebas macet, asuransi penuh, dan handling bagasi terpadu di setiap bandara.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fasilitas Terpadu & Narahubung Orang Tua -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 border-t border-gray-100">
+                    <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200">
+                        <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">📦 Fasilitas Lengkap untuk Kenyamanan Anak:</h4>
+                        <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                            <li>Tiket Pesawat PP Qatar Airways + Bagasi 25 kg</li>
+                            <li>Kereta Cepat Haramain Makkah - Madinah (300 km/jam)</li>
+                            <li>Hotel Al-Masa Badr Makkah & Al Mukhtara Al Gharbi Madinah (Dekat Masjid)</li>
+                            <li>Makan 3x Full Board + Snack Perjalanan</li>
+                            <li>Air Zam-zam 5 Liter Resmi Maskapai</li>
+                            <li>Perlengkapan Umrah Lengkap (Koper, Seragam, Ihram/Mukena)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">📞 Layanan Khusus Orang Tua Mahasiswa:</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                Panitia menyediakan grup koordinasi dan laporan berkala selama keberangkatan jamaah di Saudi Arabia agar Bapak/Ibu dapat memantau aktivitas buah hati dengan tenang.
+                            </p>
+                        </div>
+                        <div class="mt-4 p-3 bg-emerald-100/70 rounded-xl text-[11px] text-emerald-900 font-medium">
+                            📱 <strong>Konsultasi Orang Tua:</strong> WhatsApp Layanan KBIHU Salman ITB: <strong>0812-3456-7890</strong> (PIC Layanan Jamaah)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- EDISI 3: KHALAYAK UMUM & KELUARGA          -->
+        <!-- ========================================== -->
+        <div id="tab-umum" class="tab-content print-page bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hidden">
+            <!-- Header Poster Umum -->
+            <div class="bg-gradient-to-r from-teal-900 via-blue-900 to-indigo-950 text-white p-6 relative">
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-white text-teal-900 rounded-xl flex items-center justify-center font-black text-xl shadow">S</div>
+                        <div>
+                            <p class="text-xs font-extrabold tracking-wider uppercase text-amber-300">KBIHU Salman ITB & Khalifah Tour</p>
+                            <p class="text-sm font-bold text-white">Biro Perjalanan Umrah Berizin Resmi Kemenag RI</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="bg-amber-400 text-gray-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Edisi Umum & Keluarga</span>
+                        <span class="bg-white/10 text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/20">11 Hari Safar</span>
+                    </div>
+                </div>
+
+                <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                    <div class="md:col-span-2 space-y-2">
+                        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight leading-tight">
+                            UMRAH RIHLAH ILMI & PERADABAN 2027
+                        </h2>
+                        <p class="text-teal-200 text-xs md:text-sm leading-relaxed">
+                            Safar Berkah Bersama Keluarga: Menelusuri Jejak Wahyu di Makkah & Menjelajahi Puncak Sains Dunia di Arab Saudi dan Qatar.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-2 pt-2 text-[11px]">
+                            <span class="bg-teal-800/80 text-teal-100 px-3 py-1 rounded-lg border border-teal-700">🗓️ 02 - 12 Januari 2027</span>
+                            <span class="bg-teal-800/80 text-teal-100 px-3 py-1 rounded-lg border border-teal-700">✈️ Qatar Airways</span>
+                            <span class="bg-teal-800/80 text-teal-100 px-3 py-1 rounded-lg border border-teal-700">🚅 Kereta Cepat Haramain</span>
+                        </div>
+                    </div>
+                    <!-- Pilihan Kamar Card -->
+                    <div class="bg-gradient-to-br from-amber-400 to-amber-500 text-gray-950 p-4 rounded-2xl shadow-xl text-center md:text-right flex flex-col justify-center">
+                        <p class="text-[11px] font-bold uppercase tracking-wider text-amber-950">Pilihan Kamar Mulai Dari:</p>
+                        <p class="text-2xl md:text-3xl font-black tracking-tight text-gray-950 mt-0.5">Rp 36.000.000</p>
+                        <p class="text-[10px] font-semibold text-amber-900 mt-1">Full Board • Hotel Bintang 4 • Kereta Cepat</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Grid Umum -->
+            <div class="p-6 space-y-6">
+                <!-- 3 Pilihan Kamar Transparan -->
+                <div>
+                    <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider flex items-center gap-2 mb-3">
+                        <span class="w-2.5 h-2.5 bg-teal-600 rounded-full"></span>
+                        Pilihan Paket Akomodasi Kamar Jamaah:
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-center">
+                            <p class="text-xs font-bold text-gray-600 uppercase tracking-wider">Kamar Quad (Ber-4)</p>
+                            <p class="text-xl font-black text-gray-900 mt-1">Rp 36.000.000</p>
+                            <p class="text-[11px] text-gray-500 mt-1">Sekamar 4 orang jamaah / keluarga</p>
+                        </div>
+                        <div class="p-4 bg-blue-50/70 rounded-2xl border border-blue-200 text-center">
+                            <p class="text-xs font-bold text-blue-800 uppercase tracking-wider">Kamar Triple (Ber-3)</p>
+                            <p class="text-xl font-black text-blue-950 mt-1">Rp 37.500.000</p>
+                            <p class="text-[11px] text-gray-600 mt-1">Keluarga dengan 1 anak / 3 rekan</p>
+                        </div>
+                        <div class="p-4 bg-amber-50/70 rounded-2xl border border-amber-200 text-center">
+                            <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Kamar Double (Ber-2)</p>
+                            <p class="text-xl font-black text-amber-950 mt-1">Rp 40.500.000</p>
+                            <p class="text-[11px] text-gray-600 mt-1">Kamar privat pasangan suami-istri</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Keunggulan Safar Umum -->
+                <div>
+                    <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider flex items-center gap-2 mb-3">
+                        <span class="w-2.5 h-2.5 bg-blue-600 rounded-full"></span>
+                        Pengalaman Bernilai Tinggi untuk Jamaah & Keluarga:
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200">
+                            <p class="text-xs font-bold text-gray-900 flex items-center gap-1.5">🕋 Ibadah Khusyuk & Ziarah Lengkap</p>
+                            <p class="text-[11px] text-gray-600 mt-1 leading-relaxed">2x Umrah terbimbing, Shalat Jumat di Masjidil Haram, iktikaf Nabawi, Tasrih resmi Nusuk ke Raudhah Syarifah, dan ziarah Makam Rasulullah SAW & Baqi'.</p>
+                        </div>
+                        <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200">
+                            <p class="text-xs font-bold text-gray-900 flex items-center gap-1.5">🏛️ Museum Wahyu Hira Cultural District</p>
+                            <p class="text-[11px] text-gray-600 mt-1 leading-relaxed">Menelusuri sejarah turunnya wahyu pertama di kaki Jabal Nur dengan visualisasi multimedia modern, serta kunjungan ke Universitas Umm Al-Qura.</p>
+                        </div>
+                        <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200">
+                            <p class="text-xs font-bold text-gray-900 flex items-center gap-1.5">🔬 Kunjungan Sains KAUST & City Tour Doha</p>
+                            <p class="text-[11px] text-gray-600 mt-1 leading-relaxed">Menyaksikan kemajuan sains modern di tepi Laut Merah (KAUST) serta transit edukatif di Education City, Qatar National Library, dan Katara Cultural Village.</p>
+                        </div>
+                        <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200">
+                            <p class="text-xs font-bold text-gray-900 flex items-center gap-1.5">🚅 Efisiensi Kereta Cepat Haramain</p>
+                            <p class="text-[11px] text-gray-600 mt-1 leading-relaxed">Perjalanan Makkah-Madinah ditempuh hanya dalam waktu 2 jam 15 menit dengan kereta cepat 300 km/jam tanpa lelah perjalanan bus 6 jam.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fasilitas & Kontak Pendaftaran -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 border-t border-gray-100">
+                    <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200">
+                        <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">✅ Fasilitas Termasuk:</h4>
+                        <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                            <li>Tiket Pesawat PP Qatar Airways Bintang Lima</li>
+                            <li>Visa Umrah Resmi & Asuransi Perjalanan Saudi</li>
+                            <li>Tiket Kereta Cepat Haramain Makkah-Madinah</li>
+                            <li>Hotel Al-Masa Badr Makkah & Al Mukhtara Al Gharbi Madinah</li>
+                            <li>Makan 3x Full Board (Cita rasa Nusantara & Arab)</li>
+                            <li>Air Zam-zam 5 Liter + Perlengkapan Umrah Lengkap</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">📞 Informasi & Konsultasi Jamaah:</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                Pendaftaran terbuka untuk jamaah umum dari seluruh Indonesia. Tersedia layanan konsultasi tatap muka maupun online.
+                            </p>
+                        </div>
+                        <div class="mt-4 p-3 bg-teal-100/70 rounded-xl text-[11px] text-teal-950 font-medium space-y-1">
+                            <p>🏢 <strong>Kantor:</strong> Masjid Salman ITB, Jl. Ganesha No. 7, Bandung</p>
+                            <p>📱 <strong>Hotline WhatsApp:</strong> 0812-3456-7890 | 0811-1234-5678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="no-print text-center py-6 text-xs text-gray-400">
+        &copy; 2026 - 2027 KBIHU Salman ITB & Khalifah Tour. Halaman Brosur Resmi Port 8080.
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = 'tab-btn px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold text-xs rounded-xl transition';
+            });
+            const activeBtn = document.getElementById('tab-btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.className = 'tab-btn px-4 py-2 bg-blue-600 text-white font-bold text-xs rounded-xl shadow-sm transition';
+            }
+        }
+    </script>
+</body>
+</html>
