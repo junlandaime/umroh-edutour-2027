@@ -1,0 +1,175 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 PANDUAN STRUKTUR & PERTANYAAN FORMULIR PENDAFTARAN
+PROGRAM UMRAH EDUCAREER & RIHLAH ILMIAH 11 HARI (2027)
+Penyelenggara: KBIHU Salman ITB & Khalifah Tour
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+(Template ini siap di-copy-paste langsung ke Google Forms, Microsoft Forms, atau Tally.so)
+
+📌 JUDUL FORMULIR:
+Formulir Pendaftaran Resmi: Umrah EduCareer & Rihlah Ilmiah 2027
+
+📌 DESKRIPSI FORMULIR:
+Assalamu'alaikum Warahmatullahi Wabarakatuh.
+Selamat datang di formulir pendaftaran resmi Program Umrah EduCareer & Rihlah Ilmiah 11 Hari (02 – 12 Januari 2027) diselenggarakan oleh KBIHU Salman ITB bersama Khalifah Tour.
+
+Program ekspedisi ini memadukan kekhusyukan ibadah di Dua Tanah Suci (Makkah & Madinah), eksplorasi kampus riset dunia (KAUST Thuwal, Education City Doha, Umm Al-Qura, UIM Madinah), serta rintisan karier dan jejaring profesional global bersama Diaspora Alumni ITB di Qatar dan Arab Saudi.
+
+Mohon mengisi data berikut dengan lengkap dan benar untuk keperluan verifikasi berkas, pengajuan perizinan kunjungan kampus/laboratorium internasional, dan penerbitan visa umrah resmi.
+
+Hotline Informasi & Bantuan: 
+📞 WhatsApp: 0812-3456-7890 / 0811-1234-5678
+🏢 Sekretariat: Kompleks Masjid Salman ITB, Jl. Ganesa No. 7, Bandung.
+
+─────────────────────────────────────────────────────────
+BAGIAN 1: IDENTITAS & DATA PRIBADI PESERTA
+─────────────────────────────────────────────────────────
+1. Nama Lengkap [Wajib]
+   Tipe: Jawaban Singkat
+   Keterangan: Tulis sesuai dengan Paspor atau KTP (tanpa disingkat).
+
+2. Nama Panggilan / Gelar Akademik [Opsional]
+   Tipe: Jawaban Singkat
+   Contoh: Fulan / Dr. Ir. Ahmad, M.T.
+
+3. Nomor Induk Kependudukan (NIK / No. KTP) [Wajib]
+   Tipe: Jawaban Singkat (Validasi: Angka, 16 digit)
+
+4. Tempat & Tanggal Lahir [Wajib]
+   Tipe: Jawaban Singkat
+   Contoh: Bandung, 15 Agustus 2002
+
+5. Jenis Kelamin [Wajib]
+   Tipe: Pilihan Ganda
+   ( ) Laki-laki
+   ( ) Perempuan
+   *Catatan: Dibutuhkan untuk pengelompokan kamar hotel & tasrih ibadah Raudhah Nabawi.
+
+6. Nomor WhatsApp Aktif [Wajib]
+   Tipe: Jawaban Singkat
+   Keterangan: Nomor utama untuk komunikasi briefing & grup delegasi safar.
+
+7. Alamat Email Aktif [Wajib]
+   Tipe: Jawaban Singkat (Validasi: Email)
+
+8. Alamat Domisili Sekarang [Wajib]
+   Tipe: Paragraf
+   Keterangan: Alamat tempat tinggal saat ini (Kota, Kabupaten, Provinsi).
+
+─────────────────────────────────────────────────────────
+BAGIAN 2: PROFIL AKADEMIK & KARIER (EDUCAREER PROFILE)
+─────────────────────────────────────────────────────────
+9. Kategori Peserta [Wajib]
+   Tipe: Pilihan Ganda
+   ( ) Mahasiswa Aktif S1 / D4
+   ( ) Mahasiswa Pascasarjana (S2 / S3)
+   ( ) Alumni ITB (Fresh Graduate / Profesional)
+   ( ) Dosen / Peneliti / Sivitas Akademika
+   ( ) Orang Tua / Keluarga Mahasiswa
+   ( ) Umum / Eksekutif & Profesional
+
+10. Asal Kampus / Institusi / Perusahaan [Wajib]
+    Tipe: Jawaban Singkat
+    Contoh: Institut Teknologi Bandung / Universitas Indonesia / PT Pertamina
+
+11. Fakultas / Program Studi & Angkatan (atau Jabatan) [Wajib]
+    Tipe: Jawaban Singkat
+    Contoh: STEI ITB - Teknik Elektro 2021 / Data Scientist
+
+12. Tautan Profil LinkedIn / CV Online [Opsional]
+    Tipe: Jawaban Singkat
+    Keterangan: Berguna untuk kurasi sesi mentoring & networking bersama Diaspora IA-ITB Qatar & KAUST.
+
+13. Fokus Minat Utama dalam Program Ini [Wajib]
+    Tipe: Kotak Centang (Checkbox - Pilih 1 hingga 3 opsi)
+    [ ] Informasi & Bimbingan Beasiswa Riset S2/S3 (KAUST Fellowship, UIM, Qatar)
+    [ ] Peluang Karier Global & Magang Industri (Saudi Vision 2030, Industri Migas & Tech Teluk)
+    [ ] Eksplorasi Fasilitas Riset Canggih & Superkomputer (Shaheen KAUST, Core Labs)
+    [ ] Studi Sejarah Peradaban, Manuskrip Kuno & Arsitektur Islam
+    [ ] Penguatan Ibadah, Ruhiyah & Umrah Mandiri Khusyuk
+
+─────────────────────────────────────────────────────────
+BAGIAN 3: DOKUMEN PERJALANAN & IMIGRASI
+─────────────────────────────────────────────────────────
+14. Status Paspor Internasional [Wajib]
+    Tipe: Pilihan Ganda
+    ( ) Sudah punya paspor aktif (Masa berlaku lebih dari Juli 2027)
+    ( ) Sudah punya, tetapi masa berlaku habis / kurang dari 6 bulan
+    ( ) Sedang dalam proses pembuatan di Kantor Imigrasi
+    ( ) Belum punya (Memerlukan surat pengantar / rekomendasi dari Salman ITB)
+
+15. Nomor Paspor [Opsional]
+    Tipe: Jawaban Singkat (Kosongkan jika belum memiliki paspor)
+
+16. Tanggal Habis Masa Berlaku Paspor (Expiry Date) [Opsional]
+    Tipe: Tanggal
+
+17. Pengalaman Ibadah ke Tanah Suci Sebelumnya [Wajib]
+    Tipe: Pilihan Ganda
+    ( ) Belum pernah (Pertama kali safar ke Tanah Suci)
+    ( ) Sudah pernah Umrah
+    ( ) Sudah pernah Haji
+
+─────────────────────────────────────────────────────────
+BAGIAN 4: PREFERENSI PAKET & AKOMODASI (11 HARI)
+─────────────────────────────────────────────────────────
+18. Pilihan Tipe Kamar Hotel (All-Inclusive Full Board) [Wajib]
+    Tipe: Pilihan Ganda
+    ( ) Kamar Quad (Ber-4): Rp 36.000.000,- / pax
+    ( ) Kamar Triple (Ber-3): Rp 37.500.000,- / pax
+    ( ) Kamar Double (Ber-2): Rp 40.500.000,- / pax
+
+19. Permintaan Rekan Sekamar (Roommate Request) [Opsional]
+    Tipe: Jawaban Singkat
+    Keterangan: Tuliskan nama rekan/keluarga jika Anda mendaftar bersama dan ingin satu kamar.
+
+20. Ukuran Jaket Kontingen Resmi Delegasi Salman ITB [Wajib]
+    Tipe: Pilihan Ganda
+    ( ) S  |  ( ) M  |  ( ) L  |  ( ) XL  |  ( ) XXL  |  ( ) XXXL
+
+─────────────────────────────────────────────────────────
+BAGIAN 5: KESEHATAN, KEBUTUHAN KHUSUS & KONTAK DARURAT
+─────────────────────────────────────────────────────────
+21. Riwayat Penyakit Khusus / Alergi Makanan / Obat Rutin [Wajib]
+    Tipe: Jawaban Singkat
+    Keterangan: Tulis "Tidak Ada" jika kondisi sehat tanpa riwayat penyakit kronis.
+
+22. Kebutuhan Bantuan Fisik & Mobilitas Ibadah [Wajib]
+    Tipe: Pilihan Ganda
+    ( ) Tidak ada (Kondisi fisik prima untuk jalan kaki mandiri)
+    ( ) Membutuhkan pendampingan / bantuan kursi roda saat Thawaf & Sa'i
+
+23. Nama Lengkap Kontak Darurat (Emergency Contact) [Wajib]
+    Tipe: Jawaban Singkat
+    Keterangan: Keluarga terdekat yang tidak ikut berangkat.
+
+24. Hubungan Kontak Darurat dengan Peserta [Wajib]
+    Tipe: Pilihan Ganda / Jawaban Singkat
+    ( ) Orang Tua (Ayah / Ibu)
+    ( ) Pasangan (Suami / Istri)
+    ( ) Saudara Kandung
+    ( ) Wali / Kerabat Lainnya
+
+25. Nomor Telepon / WhatsApp Kontak Darurat [Wajib]
+    Tipe: Jawaban Singkat
+
+─────────────────────────────────────────────────────────
+BAGIAN 6: KOMITMEN & KONFIRMASI PEMBAYARAN
+─────────────────────────────────────────────────────────
+26. Rencana Pembayaran Uang Muka (Booking Seat / DP Rp 5.000.000,-) [Wajib]
+    Tipe: Pilihan Ganda
+    ( ) Siap melakukan pembayaran DP dalam 1-3 hari setelah verifikasi
+    ( ) Menunggu proses persetujuan sponsor / beasiswa / izin dinas
+    ( ) Ingin konsultasi / penjadwalan temu dengan panitia terlebih dahulu
+
+27. Darimana Anda Mengetahui Program Umrah EduCareer Ini? [Wajib]
+    Tipe: Kotak Centang (Bisa pilih lebih dari satu)
+    [ ] Spanduk / Poster di Kompleks Masjid Salman ITB
+    [ ] Grup WhatsApp (Alumni ITB / Himpunan / Unit Kegiatan)
+    [ ] Media Sosial (Instagram / LinkedIn / Twitter)
+    [ ] Rekomendasi Dosen / Rekan Kerja / Keluarga
+    [ ] Website Resmi Salman ITB
+
+28. Pernyataan Persetujuan & Komitmen Peserta [Wajib]
+    Tipe: Kotak Centang (Wajib dicentang)
+    [ ] "Saya menyatakan bahwa semua data yang diisi adalah benar, dan saya bersedia mengikuti tahapan verifikasi dokumen serta briefing persiapan safar yang diselenggarakan oleh KBIHU Salman ITB & Khalifah Tour."
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

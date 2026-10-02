@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 Formulir Pendaftaran Resmi - Umrah EduCareer 2027</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-shadow {
+            box-shadow: 0 4px 20px -2px rgba(16, 185, 129, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col font-sans">
+    <!-- Navbar Header -->
+    <header class="bg-gradient-to-r from-emerald-800 via-teal-900 to-slate-900 text-white sticky top-0 z-30 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="p-2 bg-white/10 hover:bg-white/20 rounded-xl transition text-xs font-bold flex items-center gap-1.5">
+                    <span>←</span> Beranda
+                </a>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold flex items-center gap-1.5">
+                        <span>📝</span> Formulir Pendaftaran Delegasi
+                    </h1>
+                    <p class="text-[11px] text-emerald-200 hidden sm:block">Umrah EduCareer & Rihlah Ilmiah 11 Hari (02–12 Jan 2027)</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="download/FORMULIR_PENDAFTARAN_UMRAH_EDUCAREER_2027.docx" download class="px-3 py-1.5 bg-white/15 hover:bg-white/25 rounded-xl text-xs font-semibold flex items-center gap-1 transition">
+                    <span>📄</span> <span class="hidden sm:inline">Format</span> Word (.docx)
+                </a>
+                <a href="wa.html" class="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-white rounded-xl text-xs font-bold transition flex items-center gap-1">
+                    <span>💬</span> Format WA
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8 flex-grow space-y-6 w-full">
+        <!-- Hero Introduction Card -->
+        <div class="bg-gradient-to-br from-emerald-900 via-teal-950 to-slate-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 space-y-3">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/20 border border-emerald-400/30 rounded-full text-emerald-300 text-xs font-bold">
+                    <span>⭐</span> Pendaftaran Gelombang 1 Dibuka
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black leading-tight text-emerald-50">
+                    Formulir Registrasi: Umrah EduCareer & Rihlah Ilmiah 2027
+                </h2>
+                <p class="text-xs sm:text-sm text-emerald-200/90 leading-relaxed max-w-2xl">
+                    Sinergi Ibadah di Dua Tanah Suci (Makkah & Madinah), Riset Sains Dunia (KAUST, QNL, UIM), dan Rintisan Karier Global bersama Diaspora Insinyur ITB di Qatar & Arab Saudi.
+                </p>
+                <div class="pt-2 flex flex-wrap gap-4 text-xs text-emerald-100/80">
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-emerald-400">🗓️</span> 02 – 12 Jan 2027 (11 Hari)
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-emerald-400">✈️</span> Qatar Airways (Bintang 5)
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-emerald-400">🚅</span> Kereta Cepat Haramain (300 km/jam)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Form Container -->
+        <form id="registrationForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+            
+            <!-- SECTION 1: DATA PRIBADI -->
+            <div class="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 custom-shadow space-y-5">
+                <div class="flex items-center gap-3 pb-3 border-b border-slate-100">
+                    <span class="w-8 h-8 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center font-bold text-sm">1</span>
+                    <div>
+                        <h3 class="font-bold text-sm sm:text-base text-slate-900">Identitas Pribadi Calon Peserta</h3>
+                        <p class="text-[11px] text-slate-500">Data legal untuk penerbitan tiket Qatar Airways & visa umrah resmi</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Nama Lengkap (Sesuai KTP / Paspor) <span class="text-red-500">*</span></label>
+                        <input type="text" id="fullName" required placeholder="Contoh: Muhammad Raihan Pratama" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Nama Panggilan / Gelar Akademik</label>
+                        <input type="text" id="nickname" placeholder="Contoh: Raihan / Dr. Eng." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Nomor Induk Kependudukan (NIK / KTP) <span class="text-red-500">*</span></label>
+                        <input type="text" id="nik" required pattern="[0-9]{16}" maxlength="16" placeholder="16 digit angka NIK KTP" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Tempat & Tanggal Lahir <span class="text-red-500">*</span></label>
+                        <input type="text" id="birthPlaceDate" required placeholder="Contoh: Bandung, 15 Juli 2002" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Jenis Kelamin <span class="text-red-500">*</span></label>
+                        <select id="gender" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                            <option value="">-- Pilih Jenis Kelamin --</option>
+                            <option value="Laki-laki">Laki-laki (Ikhwan)</option>
+                            <option value="Perempuan">Perempuan (Akhwat)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Nomor WhatsApp Aktif <span class="text-red-500">*</span></label>
+                        <input type="tel" id="whatsapp" required placeholder="Contoh: 081234567890" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Alamat Email Aktif <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" required placeholder="Contoh: nama@gmail.com" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Alamat Domisili Sekarang <span class="text-red-500">*</span></label>
+                        <textarea id="address" required rows="2" placeholder="Nama jalan, nomor rumah, kelurahan, kecamatan, kota/kabupaten & provinsi" class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: PROFIL AKADEMIK & KARIER -->
+            <div class="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 custom-shadow space-y-5">
+                <div class="flex items-center gap-3 pb-3 border-b border-slate-100">
+                    <span class="w-8 h-8 bg-blue-100 text-blue-800 rounded-xl flex items-center justify-center font-bold text-sm">2</span>
+                    <div>
+                        <h3 class="font-bold text-sm sm:text-base text-slate-900">Profil Akademik & Eksplorasi Karier</h3>
+                        <p class="text-[11px] text-slate-500">Digunakan untuk perizinan ID delegasi KAUST & kurasi sesi mentoring diaspora</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Kategori Peserta <span class="text-red-500">*</span></label>
+                        <select id="category" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                            <option value="">-- Pilih Kategori Anda --</option>
+                            <option value="Mahasiswa Aktif S1 / D4">Mahasiswa Aktif S1 / D4</option>
+                            <option value="Mahasiswa Pascasarjana (S2 / S3)">Mahasiswa Pascasarjana (S2 / S3)</option>
+                            <option value="Alumni ITB (Fresh Graduate / Profesional)">Alumni ITB (Fresh Graduate / Profesional)</option>
+                            <option value="Dosen / Peneliti / Sivitas Akademika">Dosen / Peneliti / Sivitas Akademika</option>
+                            <option value="Orang Tua / Keluarga Mahasiswa">Orang Tua / Keluarga Mahasiswa</option>
+                            <option value="Umum / Profesional & Eksekutif">Umum / Profesional & Eksekutif</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Asal Kampus / Institusi / Perusahaan <span class="text-red-500">*</span></label>
+                        <input type="text" id="institution" required placeholder="Contoh: Institut Teknologi Bandung" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Fakultas / Program Studi & Angkatan (atau Jabatan) <span class="text-red-500">*</span></label>
+                        <input type="text" id="major" required placeholder="Contoh: STEI ITB - Teknik Informatika 2021" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Tautan Profil LinkedIn / Portofolio Online <span class="text-slate-400 font-normal">(Opsional)</span></label>
+                        <input type="url" id="linkedin" placeholder="Contoh: https://linkedin.com/in/username" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                        <p class="text-[10px] text-slate-400 mt-1">*Membantu narasumber diaspora IA-ITB Qatar & KAUST mengenali profil dan minat Anda.</p>
+                    </div>
+
+                    <div class="sm:col-span-2 space-y-2">
+                        <label class="block text-xs font-bold text-slate-700">Fokus Minat Utama dalam Program Ini <span class="text-red-500">*</span> <span class="text-slate-400 font-normal">(Pilih 1 - 3)</span></label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                            <label class="flex items-center gap-2 p-2.5 bg-slate-50 hover:bg-emerald-50/50 border border-slate-200 rounded-xl cursor-pointer transition">
+                                <input type="checkbox" name="interests" value="Beasiswa Riset S2/S3 (KAUST Fellowship, UIM, Qatar)" class="rounded text-emerald-600 focus:ring-emerald-500">
+                                <span>🎓 Beasiswa S2/S3 (KAUST & Qatar)</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 bg-slate-50 hover:bg-emerald-50/50 border border-slate-200 rounded-xl cursor-pointer transition">
+                                <input type="checkbox" name="interests" value="Peluang Karier Global & Magang Industri (Saudi 2030 / Migas)" class="rounded text-emerald-600 focus:ring-emerald-500">
+                                <span>💼 Peluang Karier & Magang Teluk</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 bg-slate-50 hover:bg-emerald-50/50 border border-slate-200 rounded-xl cursor-pointer transition">
+                                <input type="checkbox" name="interests" value="Eksplorasi Laboratorium Canggih & Superkomputer Shaheen" class="rounded text-emerald-600 focus:ring-emerald-500">
+                                <span>🔬 Riset Lab & Superkomputer</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 bg-slate-50 hover:bg-emerald-50/50 border border-slate-200 rounded-xl cursor-pointer transition">
+                                <input type="checkbox" name="interests" value="Studi Sejarah Peradaban & Manuskrip Kuno Islam" class="rounded text-emerald-600 focus:ring-emerald-500">
+                                <span>📜 Sejarah Peradaban & Manuskrip</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 bg-slate-50 hover:bg-emerald-50/50 border border-slate-200 rounded-xl cursor-pointer transition sm:col-span-2">
+                                <input type="checkbox" name="interests" value="Penguatan Ibadah, Ruhiyah & Umrah Mandiri Khusyuk" class="rounded text-emerald-600 focus:ring-emerald-500" checked>
+                                <span>🕋 Penguatan Ibadah & Umrah Khusyuk di Dua Tanah Suci</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: DOKUMEN PERJALANAN & PASPOR -->
+            <div class="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 custom-shadow space-y-5">
+                <div class="flex items-center gap-3 pb-3 border-b border-slate-100">
+                    <span class="w-8 h-8 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center font-bold text-sm">3</span>
+                    <div>
+                        <h3 class="font-bold text-sm sm:text-base text-slate-900">Dokumen Paspor & Pengalaman Ibadah</h3>
+                        <p class="text-[11px] text-slate-500">Ketentuan masa berlaku paspor minimal aktif s/d Juli 2027</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Status Kepemilikan Paspor <span class="text-red-500">*</span></label>
+                        <select id="passportStatus" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                            <option value="">-- Pilih Status Paspor --</option>
+                            <option value="Sudah Punya (Masa berlaku aktif > Juli 2027)">Sudah punya paspor aktif (Berlaku > Juli 2027)</option>
+                            <option value="Sudah Punya, Tapi Perlu Perpanjangan">Sudah punya, tetapi perlu perpanjangan (< 6 bulan)</option>
+                            <option value="Sedang Dalam Proses Pembuatan">Sedang dalam proses pembuatan di Imigrasi</option>
+                            <option value="Belum Punya (Butuh Surat Rekomendasi Panitia)">Belum punya (Memerlukan Surat Pengantar dari Salman ITB)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Nomor Paspor <span class="text-slate-400 font-normal">(Kosongkan jika belum ada)</span></label>
+                        <input type="text" id="passportNumber" placeholder="Contoh: A 1234567" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Masa Berlaku Paspor s/d</label>
+                        <input type="date" id="passportExpiry" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Pengalaman Ibadah ke Tanah Suci Sebelumnya <span class="text-red-500">*</span></label>
+                        <select id="worshipExp" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                            <option value="Pertama Kali (Belum pernah)">Pertama Kali (Belum pernah ke Tanah Suci)</option>
+                            <option value="Sudah Pernah Umrah">Sudah Pernah Umrah</option>
+                            <option value="Sudah Pernah Haji">Sudah Pernah Haji</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: PILIHAN PAKET & AKOMODASI -->
+            <div class="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 custom-shadow space-y-5">
+                <div class="flex items-center gap-3 pb-3 border-b border-slate-100">
+                    <span class="w-8 h-8 bg-purple-100 text-purple-800 rounded-xl flex items-center justify-center font-bold text-sm">4</span>
+                    <div>
+                        <h3 class="font-bold text-sm sm:text-base text-slate-900">Pilihan Paket & Akomodasi Hotel</h3>
+                        <p class="text-[11px] text-slate-500">Paket All-Inclusive Full Board 11 Hari: Pesawat Qatar Airways, Kereta Cepat & Akses Kampus</p>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <label class="block text-xs font-bold text-slate-700">Tipe Kamar Hotel yang Dipilih <span class="text-red-500">*</span></label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <label class="relative p-4 border-2 border-slate-200 rounded-2xl cursor-pointer hover:border-emerald-500 transition flex flex-col justify-between group">
+                            <input type="radio" name="roomPackage" value="Quad (Ber-4) - Rp 36.000.000,-" required class="absolute top-4 right-4 text-emerald-600 focus:ring-emerald-500">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md">Paling Populer</span>
+                                <h4 class="font-bold text-sm text-slate-900 mt-2">Kamar Quad (Ber-4)</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">1 Kamar untuk 4 Orang</p>
+                            </div>
+                            <div class="mt-4 pt-2 border-t border-slate-100">
+                                <span class="text-base font-extrabold text-slate-900">Rp 36.000.000</span>
+                                <span class="text-[10px] text-slate-500 block">per jamaah</span>
+                            </div>
+                        </label>
+
+                        <label class="relative p-4 border-2 border-slate-200 rounded-2xl cursor-pointer hover:border-emerald-500 transition flex flex-col justify-between group">
+                            <input type="radio" name="roomPackage" value="Triple (Ber-3) - Rp 37.500.000,-" required class="absolute top-4 right-4 text-emerald-600 focus:ring-emerald-500">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md">Lebih Lega</span>
+                                <h4 class="font-bold text-sm text-slate-900 mt-2">Kamar Triple (Ber-3)</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">1 Kamar untuk 3 Orang</p>
+                            </div>
+                            <div class="mt-4 pt-2 border-t border-slate-100">
+                                <span class="text-base font-extrabold text-slate-900">Rp 37.500.000</span>
+                                <span class="text-[10px] text-slate-500 block">per jamaah</span>
+                            </div>
+                        </label>
+
+                        <label class="relative p-4 border-2 border-slate-200 rounded-2xl cursor-pointer hover:border-emerald-500 transition flex flex-col justify-between group">
+                            <input type="radio" name="roomPackage" value="Double (Ber-2) - Rp 40.500.000,-" required class="absolute top-4 right-4 text-emerald-600 focus:ring-emerald-500">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2 py-0.5 rounded-md">Privat / Pasutri</span>
+                                <h4 class="font-bold text-sm text-slate-900 mt-2">Kamar Double (Ber-2)</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">1 Kamar untuk 2 Orang</p>
+                            </div>
+                            <div class="mt-4 pt-2 border-t border-slate-100">
+                                <span class="text-base font-extrabold text-slate-900">Rp 40.500.000</span>
+                                <span class="text-[10px] text-slate-500 block">per jamaah</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Permintaan Teman Sekamar <span class="text-slate-400 font-normal">(Opsional)</span></label>
+                        <input type="text" id="roommate" placeholder="Tuliskan nama rekan/keluarga jika mendaftar bareng" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Ukuran Jaket Delegasi Kontingen <span class="text-red-500">*</span></label>
+                        <select id="jacketSize" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                            <option value="">-- Pilih Ukuran Jaket --</option>
+                            <option value="S">S (Small)</option>
+                            <option value="M">M (Medium)</option>
+                            <option value="L">L (Large)</option>
+                            <option value="XL">XL (Extra Large)</option>
+                            <option value="XXL">XXL (Double Extra Large)</option>
+                            <option value="XXXL">XXXL (Triple Extra Large)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 5: KESEHATAN & KONTAK DARURAT -->
+            <div class="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 custom-shadow space-y-5">
+                <div class="flex items-center gap-3 pb-3 border-b border-slate-100">
+                    <span class="w-8 h-8 bg-rose-100 text-rose-800 rounded-xl flex items-center justify-center font-bold text-sm">5</span>
+                    <div>
+                        <h3 class="font-bold text-sm sm:text-base text-slate-900">Kesehatan & Kontak Darurat (Emergency Contact)</h3>
+                        <p class="text-[11px] text-slate-500">Untuk keamanan dan kenyamanan medis selama perjalanan safar</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Riwayat Alergi / Penyakit Khusus / Obat Rutin <span class="text-red-500">*</span></label>
+                        <input type="text" id="medicalHistory" required value="Tidak Ada" placeholder="Tulis 'Tidak Ada' jika kondisi prima" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Bantuan Fisik / Kursi Roda Saat Ibadah <span class="text-red-500">*</span></label>
+                        <select id="wheelchair" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                            <option value="Tidak ada (Fisik prima mandiri)">Tidak ada (Fisik prima mandiri)</option>
+                            <option value="Membutuhkan bantuan kursi roda Thawaf & Sa'i">Membutuhkan bantuan kursi roda Thawaf & Sa'i</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Nama Lengkap Kontak Darurat <span class="text-red-500">*</span></label>
+                        <input type="text" id="emergencyName" required placeholder="Nama keluarga terdekat yang tidak ikut" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Hubungan Keluarga <span class="text-red-500">*</span></label>
+                        <select id="emergencyRelation" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                            <option value="">-- Pilih Hubungan --</option>
+                            <option value="Orang Tua (Ayah / Ibu)">Orang Tua (Ayah / Ibu)</option>
+                            <option value="Pasangan (Suami / Istri)">Pasangan (Suami / Istri)</option>
+                            <option value="Saudara Kandung">Saudara Kandung</option>
+                            <option value="Wali / Kerabat Dekat">Wali / Kerabat Dekat</option>
+                        </select>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Nomor Telepon / WhatsApp Kontak Darurat <span class="text-red-500">*</span></label>
+                        <input type="tel" id="emergencyPhone" required placeholder="Contoh: 081398765432" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 6: KOMITMEN & PEMBAYARAN -->
+            <div class="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 custom-shadow space-y-5">
+                <div class="flex items-center gap-3 pb-3 border-b border-slate-100">
+                    <span class="w-8 h-8 bg-teal-100 text-teal-800 rounded-xl flex items-center justify-center font-bold text-sm">6</span>
+                    <div>
+                        <h3 class="font-bold text-sm sm:text-base text-slate-900">Komitmen & Konfirmasi Pembayaran DP</h3>
+                        <p class="text-[11px] text-slate-500">Booking seat resmi dengan Uang Muka (DP) Rp 5.000.000,-</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Rencana Pembayaran Uang Muka (DP) <span class="text-red-500">*</span></label>
+                        <select id="paymentPlan" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                            <option value="Siap bayar DP dalam 1-3 hari setelah verifikasi">Siap bayar DP (Rp 5.000.000,-) dalam 1-3 hari ke depan</option>
+                            <option value="Menunggu konfirmasi sponsor / beasiswa / izin kampus">Menunggu konfirmasi izin sponsor / beasiswa / kampus</option>
+                            <option value="Ingin konsultasi langsung dengan panitia terlebih dahulu">Ingin konsultasi langsung dengan panitia terlebih dahulu</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Darimana Anda Mengetahui Program Ini? <span class="text-red-500">*</span></label>
+                        <select id="sourceInfo" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
+                            <option value="Masjid Salman ITB (Poster/Spanduk)">Masjid Salman ITB (Poster / Spanduk / Pengumuman)</option>
+                            <option value="Grup WhatsApp Alumni / Himpunan ITB">Grup WhatsApp Alumni / Himpunan / Unit ITB</option>
+                            <option value="Media Sosial (Instagram / LinkedIn / Twitter)">Media Sosial (Instagram / LinkedIn / Twitter)</option>
+                            <option value="Rekomendasi Dosen / Teman / Keluarga">Rekomendasi Dosen / Teman / Rekan Kerja</option>
+                            <option value="Website Resmi Salman ITB">Website Resmi Salman ITB</option>
+                        </select>
+                    </div>
+
+                    <div class="pt-2">
+                        <label class="flex items-start gap-3 p-3 bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer">
+                            <input type="checkbox" id="agreementCheck" required class="mt-0.5 rounded text-emerald-600 focus:ring-emerald-500">
+                            <span class="text-xs text-slate-700 leading-relaxed">
+                                Saya menyatakan bahwa seluruh data yang diisikan adalah benar. Saya bersedia mengikuti tahapan verifikasi berkas, pengumpulan paspor, dan rangkaian briefing safar resmi KBIHU Salman ITB & Khalifah Tour.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                <button type="submit" class="w-full sm:flex-1 py-3.5 px-6 bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-extrabold text-sm rounded-2xl shadow-lg transition flex items-center justify-center gap-2 cursor-pointer active:scale-95">
+                    <span>📲</span> <span>Kirim Pendaftaran via WhatsApp</span>
+                </button>
+                <button type="button" onclick="downloadSummaryTxt()" class="w-full sm:w-auto py-3.5 px-5 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs rounded-2xl border border-slate-300 transition flex items-center justify-center gap-1.5 cursor-pointer">
+                    <span>📥</span> <span>Download Salinan Ringkasan (.txt)</span>
+                </button>
+            </div>
+        </form>
+
+        <!-- Preview Modal -->
+        <div id="previewModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+            <div class="bg-white max-w-lg w-full rounded-3xl p-6 space-y-4 shadow-2xl max-h-[90vh] flex flex-col">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                    <h3 class="font-extrabold text-base text-slate-900 flex items-center gap-2">
+                        <span>✅</span> Data Pendaftaran Siap Dikirim
+                    </h3>
+                    <button onclick="closePreviewModal()" class="text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
+                </div>
+                <div class="flex-grow overflow-y-auto font-mono text-xs p-3 bg-slate-50 rounded-2xl border border-slate-200 text-slate-800 whitespace-pre-wrap leading-relaxed" id="modalTextPreview"></div>
+                <div class="flex items-center gap-2 pt-2">
+                    <button onclick="executeSendWa()" class="flex-1 py-3 bg-green-500 hover:bg-green-600 text-white font-bold text-xs rounded-xl shadow transition flex items-center justify-center gap-1.5 cursor-pointer">
+                        <span>🚀</span> Buka WhatsApp & Kirim
+                    </button>
+                    <button onclick="copyModalText()" class="py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl transition cursor-pointer">
+                        📋 Salin Teks
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white border-t border-slate-800 py-6 mt-12 text-center text-xs text-slate-400">
+        <p class="font-bold text-slate-300">KBIHU Salman ITB & Khalifah Tour</p>
+        <p class="text-[11px] mt-1">Kompleks Masjid Salman ITB, Jl. Ganesa No. 7, Bandung | Hotline: 0812-3456-7890</p>
+    </footer>
+
+    <!-- Form Script -->
+    <script>
+        let compiledWaText = "";
+
+        function getFormData() {
+            const interestsChecked = Array.from(document.querySelectorAll('input[name="interests"]:checked')).map(el => el.value);
+            const roomEl = document.querySelector('input[name="roomPackage"]:checked');
+
+            return {
+                fullName: document.getElementById('fullName').value.trim(),
+                nickname: document.getElementById('nickname').value.trim(),
+                nik: document.getElementById('nik').value.trim(),
+                birthPlaceDate: document.getElementById('birthPlaceDate').value.trim(),
+                gender: document.getElementById('gender').value,
+                whatsapp: document.getElementById('whatsapp').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                address: document.getElementById('address').value.trim(),
+                category: document.getElementById('category').value,
+                institution: document.getElementById('institution').value.trim(),
+                major: document.getElementById('major').value.trim(),
+                linkedin: document.getElementById('linkedin').value.trim() || "-",
+                interests: interestsChecked.length > 0 ? interestsChecked.join(", ") : "Umrah Khusyuk & Edukasi",
+                passportStatus: document.getElementById('passportStatus').value,
+                passportNumber: document.getElementById('passportNumber').value.trim() || "-",
+                passportExpiry: document.getElementById('passportExpiry').value || "-",
+                worshipExp: document.getElementById('worshipExp').value,
+                roomPackage: roomEl ? roomEl.value : "Quad (Ber-4)",
+                roommate: document.getElementById('roommate').value.trim() || "-",
+                jacketSize: document.getElementById('jacketSize').value,
+                medicalHistory: document.getElementById('medicalHistory').value.trim(),
+                wheelchair: document.getElementById('wheelchair').value,
+                emergencyName: document.getElementById('emergencyName').value.trim(),
+                emergencyRelation: document.getElementById('emergencyRelation').value,
+                emergencyPhone: document.getElementById('emergencyPhone').value.trim(),
+                paymentPlan: document.getElementById('paymentPlan').value,
+                sourceInfo: document.getElementById('sourceInfo').value
+            };
+        }
+
+        function formatWaMessage(d) {
+            return `━━━━━━━━━━━━━━━━━━━━━━━━
+📝 *PENDAFTARAN RESMI UMRAH EDUCAREER 2027*
+_KBIHU Salman ITB & Khalifah Tour (02–12 Jan 2027)_
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+*I. DATA PRIBADI:*
+• *Nama Lengkap:* ${d.fullName}
+• *Nama Panggilan/Gelar:* ${d.nickname || "-"}
+• *NIK KTP:* ${d.nik}
+• *TTL:* ${d.birthPlaceDate}
+• *Gender:* ${d.gender}
+• *No. WhatsApp:* ${d.whatsapp}
+• *Email:* ${d.email}
+• *Alamat:* ${d.address}
+
+*II. PROFIL EDUCAREER:*
+• *Kategori:* ${d.category}
+• *Institusi/Kampus:* ${d.institution}
+• *Jurusan/Jabatan:* ${d.major}
+• *LinkedIn/Portofolio:* ${d.linkedin}
+• *Fokus Minat:* ${d.interests}
+
+*III. PASPOR & SAFAR:*
+• *Status Paspor:* ${d.passportStatus}
+• *No. Paspor:* ${d.passportNumber} (Exp: ${d.passportExpiry})
+• *Pengalaman Ibadah:* ${d.worshipExp}
+
+*IV. PILIHAN AKOMODASI:*
+• *Paket Kamar:* ${d.roomPackage}
+• *Request Roommate:* ${d.roommate}
+• *Ukuran Jaket:* ${d.jacketSize}
+
+*V. KESEHATAN & KONTAK DARURAT:*
+• *Riwayat Kesehatan:* ${d.medicalHistory}
+• *Bantuan Khusus:* ${d.wheelchair}
+• *Kontak Darurat:* ${d.emergencyName} (${d.emergencyRelation}) - ${d.emergencyPhone}
+
+*VI. KOMITMEN & PEMBAYARAN:*
+• *Rencana DP (Rp 5jt):* ${d.paymentPlan}
+• *Sumber Informasi:* ${d.sourceInfo}
+• *Status:* Bersedia melengkapi dokumen verifikasi resmi.
+━━━━━━━━━━━━━━━━━━━━━━━━
+_Mohon instruksi selanjutnya untuk transfer DP dan verifikasi dokumen. Terima kasih._`;
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const data = getFormData();
+            compiledWaText = formatWaMessage(data);
+            
+            document.getElementById('modalTextPreview').innerText = compiledWaText;
+            document.getElementById('previewModal').classList.remove('hidden');
+        }
+
+        function closePreviewModal() {
+            document.getElementById('previewModal').classList.add('hidden');
+        }
+
+        function executeSendWa() {
+            const hotline = "6281234567890"; // Panitia hotline
+            const encoded = encodeURIComponent(compiledWaText);
+            window.open(`https://api.whatsapp.com/send?phone=${hotline}&text=${encoded}`, '_blank');
+        }
+
+        function copyModalText() {
+            navigator.clipboard.writeText(compiledWaText).then(() => {
+                alert("Data pendaftaran berhasil disalin ke clipboard! Silakan paste di WhatsApp.");
+            }).catch(() => {
+                alert("Gagal menyalin otomatis, silakan salin teks manual di atas.");
+            });
+        }
+
+        function downloadSummaryTxt() {
+            const data = getFormData();
+            if (!data.fullName) {
+                alert("Harap isi Nama Lengkap terlebih dahulu.");
+                return;
+            }
+            const text = formatWaMessage(data);
+            const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = `FORMULIR_PENDAFTARAN_${data.fullName.replace(/\s+/g, '_').toUpperCase()}.txt`;
+            a.click();
+        }
+    </script>
+</body>
+</html>
