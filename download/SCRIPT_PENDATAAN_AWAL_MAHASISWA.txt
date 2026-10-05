@@ -1,0 +1,75 @@
+function buatFormPendataanAwalMahasiswa() {
+  var form = FormApp.create("Pendataan Awal Peserta Umroh Mahasiswa & EduCareer 2027");
+  
+  form.setDescription(
+    "Assalamu'alaikum teman-teman mahasiswa!\n\n" +
+    "Program ini adalah safar spesial 11 hari (02 - 12 Januari 2027) diselenggarakan oleh KBIHU Salman ITB & Khalifah Tour. " +
+    "Memadukan ibadah umrah khusyuk di Tanah Suci dengan eksplorasi kampus riset dunia (KAUST Thuwal, Education City Doha, UIM Madinah) " +
+    "dan bincang karier bersama diaspora insinyur Indonesia di Qatar.\n\n" +
+    "Formulir singkat ini (1 menit) bertujuan untuk mendata teman-teman yang berminat serius agar mendapatkan prioritas antrean kursi, " +
+    "akses grup WhatsApp koordinasi, dan undangan sesi Zoom info-session bersama panitia.\n\n" +
+    "(Pengisian berkas lengkap dan pembayaran DP Rp 5 juta akan dilakukan di tahap berikutnya).\n\n" +
+    "Hotline WA Panitia: 0812-3456-7890 / 0811-1234-5678\n" +
+    "Sekretariat: Kompleks Masjid Salman ITB, Jl. Ganesa No. 7, Bandung"
+  );
+
+  // Helper fungsi rapi
+  function addText(title, help, req) {
+    var item = form.addTextItem().setTitle(title).setRequired(req);
+    if (help) item.setHelpText(help);
+    return item;
+  }
+  function addChoice(title, choices, req, help) {
+    var item = form.addMultipleChoiceItem().setTitle(title).setChoiceValues(choices).setRequired(req);
+    if (help) item.setHelpText(help);
+    return item;
+  }
+  function addCheck(title, choices, req, help) {
+    var item = form.addCheckboxItem().setTitle(title).setChoiceValues(choices).setRequired(req);
+    if (help) item.setHelpText(help);
+    return item;
+  }
+
+  // 7 Pertanyaan Inti
+  addText("1. Nama Lengkap & Nama Panggilan", "Contoh: Muhammad Raihan (Raihan)", true);
+  addText("2. Nomor WhatsApp Aktif", "Nomor utama untuk undangan Zoom info-session & grup info", true);
+  addText("3. Asal Kampus, Fakultas/Jurusan & Angkatan", "Contoh: ITB - Teknik Fisika 2022 / Unpad - Manajemen 2021", true);
+  
+  addCheck("4. Hal yang Paling Membuatmu Tertarik Ikut Program Ini?", [
+    "Ibadah Umrah bareng teman-teman sebaya / sesama mahasiswa",
+    "Kupas tuntas beasiswa S2/S3 (KAUST Fellowship, UIM, Qatar)",
+    "Peluang kerja & networking industri teknologi/energi di Timur Tengah",
+    "Kunjungan lab riset canggih & Superkomputer Shaheen di KAUST",
+    "Semuanya sangat menarik"
+  ], true, "Bisa pilih lebih dari satu");
+
+  addChoice("5. Status Kepemilikan Paspor Saat Ini", [
+    "Sudah punya paspor aktif (masa berlaku aman)",
+    "Belum punya (perlu panduan/rekomendasi pembuatan paspor dari panitia)",
+    "Paspor ada, tapi sudah/akan habis masa berlakunya"
+  ], true);
+
+  addChoice("6. Seberapa Siap Rencanamu Berangkat pada Januari 2027?", [
+    "Sangat Siap (80 - 100%): Insya Allah mantap ikut, tinggal menunggu arahan pembayaran DP & verifikasi",
+    "Tertarik Kuat (50 - 79%): Ingin ikut, saat ini sedang mendiskusikan dengan orang tua / menyiapkan dana",
+    "Tertarik tapi butuh info lebih lanjut: Ingin ikut sesi Zoom briefing & tanya jawab dulu dengan panitia"
+  ], true);
+
+  addChoice("7. Rencana Dukungan Pembiayaan", [
+    "Didukung oleh Orang Tua / Keluarga",
+    "Menabung secara mandiri",
+    "Berencana mencari sponsor / hibah",
+    "Tertarik jika ada skema tabungan syariah / cicilan"
+  ], true);
+
+  // Hubungkan ke Google Sheets Baru
+  var sheet = SpreadsheetApp.create("Respon Pendataan Awal: Peserta Umroh Mahasiswa 2027");
+  form.setDestination(FormApp.DestinationType.SPREADSHEET, sheet.getId());
+
+  Logger.log("====================================================");
+  Logger.log("BERHASIL DIBUAT!");
+  Logger.log("Link Edit Form: " + form.getEditUrl());
+  Logger.log("Link Publik Form: " + form.getPublishedUrl());
+  Logger.log("Link Google Sheets: " + sheet.getUrl());
+  Logger.log("====================================================");
+}
