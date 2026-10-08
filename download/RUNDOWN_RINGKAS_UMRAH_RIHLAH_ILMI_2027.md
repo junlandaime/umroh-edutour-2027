@@ -13,7 +13,7 @@
 | **Maskapai Utama** | **Qatar Airways** (CGK – DOH – JED & JED – DOH – CGK) |
 | **Hotel Makkah** | **Al-Masa Badr 3★** / setaraf (4 Malam, Jl. Ibrahim Al-Khalil ±700m ke Masjidil Haram) |
 | **Hotel Madinah** | **Al Mukhtara Al Gharbi 3★** / setaraf (3 Malam, dekat Masjid Nabawi) |
-| **Hotel Doha** | **Doha 3★ Pilihan** (1 Malam Transit) |
+| **Hotel Doha** | **Central Inn Souq Waqif 3★** (1 Malam Transit) |
 | **Kereta Cepat** | **Haramain High-Speed Train** (Makkah ke Madinah, 300 km/jam, durasi ~2j 15m) |
 | **Harga Paket (All-In)** | **Quad: Rp 36.000.000,-** | **Triple: Rp 37.500.000,-** | **Double: Rp 40.500.000,-** |
 | **3 Kunjungan Universitas** | 1. KAUST (Thuwal) | 2. Umm Al-Qura University (Makkah) | 3. Islamic University of Madinah (UIM) |
